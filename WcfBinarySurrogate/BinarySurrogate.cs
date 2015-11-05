@@ -32,8 +32,10 @@ namespace WcfBinarySurrogate
             {
                 return typeof(BinaryStringContainer);
             }
-            
-            return type;
+            else
+            {
+                return type;
+            }
         }
 
         public object GetObjectToSerialize(object obj, Type targetType)
@@ -43,7 +45,10 @@ namespace WcfBinarySurrogate
                 BinaryStringContainer bs = BinarySurrogateHelper.CreateSurrogate(obj);
                 return bs;
             }
-            return obj;
+            else
+            {
+                return obj;
+            }
         }
 
         public object GetDeserializedObject(object obj, Type targetType)
@@ -54,7 +59,10 @@ namespace WcfBinarySurrogate
                 object ret = BinarySurrogateHelper.CreateObject(bs);
                 return ret;
             }
-            return obj;
+            else
+            {
+                return obj;
+            }
         }
 
         public Type GetReferencedTypeOnImport(string typeName, string typeNamespace, object customData)

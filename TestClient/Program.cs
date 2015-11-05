@@ -21,7 +21,7 @@ namespace TestClient
                 ApplyDataContractSurrogate(opDesc);
             }
 
-            var x =  c.GetData(100);
+            ParentClass pc =  c.GetData(100);
         }
 
         private static void ApplyDataContractSurrogate(OperationDescription description)
@@ -32,6 +32,10 @@ namespace TestClient
                 if (dcsOperationBehavior.DataContractSurrogate == null)
                 {
                     dcsOperationBehavior.DataContractSurrogate = new BinarySurrogate(new MyBinarySerializedTypeProvider());
+                }
+                else
+                {
+                    throw new InvalidOperationException(string.Format("Try to apply surrogate on a behavior which already has one! Original surrogate: {0}. Applied surrogate: {1}.", dcsOperationBehavior.DataContractSurrogate.GetType().Name, typeof(BinarySurrogate).Name));
                 }
             }
         }

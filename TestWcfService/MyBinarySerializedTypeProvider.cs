@@ -9,12 +9,15 @@ namespace TestWcfService
 {
     public class MyBinarySerializedTypeProvider : IBinarySerializedTypeProvider
     {
+        private static readonly IEnumerable<Type> surrogatedTypes = new List<Type>()
+            {
+                typeof(CustomChild), 
+                typeof(IEnumerable<CustomChild>),
+            };
+
         public IEnumerable<Type> GetBinarySerializableTypes()
         {
-            return new List<Type>()
-            {
-                typeof(CustomChild), typeof(IEnumerable<CustomChild>)
-            };
+            return surrogatedTypes;
         }
     }
 }
