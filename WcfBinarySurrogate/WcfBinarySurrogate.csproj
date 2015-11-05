@@ -48,11 +48,9 @@
   <ItemGroup>
     <Compile Include="BinaryStringContainer.cs" />
     <Compile Include="BinarySurrogateHelper.cs" />
-    <Compile Include="CustomChild.cs" />
     <Compile Include="CustomSerializerBehaviorAttribute.cs" />
     <Compile Include="BinarySurrogate.cs" />
-    <Compile Include="NormalChild.cs" />
-    <Compile Include="ParentClass.cs" />
+    <Compile Include="IBinarySerializedTypeProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Properties\DataSources\Nexogen.WIRE.Gis.Route.datasource" />
+    <None Include="Properties\DataSources\TestWcfService.ParentClass.datasource" />
     <None Include="Properties\DataSources\WcfBinarySurrogate.ParentClass.datasource" />
     <None Include="Properties\DataSources\XmlSerializerTest.ParentClass.datasource" />
     <None Include="Service References\TestServiceReference\Arrays.xsd">
@@ -84,6 +84,9 @@
     <None Include="Service References\TestServiceReference\TestClient.TestServiceReference.Route.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\TestServiceReference\TestWcfService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\TestServiceReference\WcfBinarySurrogate.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -107,6 +110,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TestWcfService\TestWcfService.csproj">
+      <Project>{36a5468a-0668-4794-ab66-d3f1884091fe}</Project>
+      <Name>TestWcfService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WcfBinarySurrogate\WcfBinarySurrogate.csproj">
       <Project>{eaa95bf2-3dc0-4687-b679-d49854f588d6}</Project>
       <Name>WcfBinarySurrogate</Name>

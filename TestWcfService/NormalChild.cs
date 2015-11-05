@@ -5,11 +5,11 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WcfBinarySurrogate
+namespace TestWcfService
 {
     [DataContract]
     [Serializable]
-    public class CustomChild
+    public class NormalChild
     {
         [DataMember]
         public string Name { get; set; }

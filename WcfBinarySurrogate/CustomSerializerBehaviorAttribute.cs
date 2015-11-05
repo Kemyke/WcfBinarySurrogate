@@ -11,6 +11,26 @@ namespace WcfBinarySurrogate
 {
     public class UseBinarySurrogateBehaviorAttribute : Attribute, IContractBehavior
     {
+        private IBinarySerializedTypeProvider typeProvider;
+
+        /// <summary>
+        /// ctor
+        /// </summary>
+        /// <param name="typeProvider">Must implement IBinarySerializedTypeProvider</param>
+        public UseBinarySurrogateBehaviorAttribute(Type typeProvider)
+        {
+            if(typeProvider == null)
+            {
+                throw new ArgumentNullException("typeProvider");
+            }
+
+            this.typeProvider = Activator.CreateInstance(typeProvider) as IBinarySerializedTypeProvider;
+            if(this.typeProvider == null)
+            {
+                throw new ArgumentException("typeProvider implement IBinarySerializedTypeProvider");
+            }
+        }
+
         public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Channels.BindingParameterCollection bindingParameters)
         {
         }
@@ -27,12 +47,12 @@ namespace WcfBinarySurrogate
                 DataContractSerializerOperationBehavior dataContractBehavior = op.Behaviors.Find<DataContractSerializerOperationBehavior>() as DataContractSerializerOperationBehavior;
                 if (dataContractBehavior != null)
                 {
-                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate();
+                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate(typeProvider);
                 }
                 else
                 {
                     dataContractBehavior = new DataContractSerializerOperationBehavior(op);
-                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate();
+                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate(typeProvider);
                     op.Behaviors.Add(dataContractBehavior);
                 }
             }
@@ -49,12 +69,12 @@ namespace WcfBinarySurrogate
                 DataContractSerializerOperationBehavior dataContractBehavior = od.Behaviors.Find<DataContractSerializerOperationBehavior>() as DataContractSerializerOperationBehavior;
                 if (dataContractBehavior != null)
                 {
-                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate();
+                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate(typeProvider);
                 }
                 else
                 {
                     dataContractBehavior = new DataContractSerializerOperationBehavior(od);
-                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate();
+                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate(typeProvider);
                     od.Behaviors.Add(dataContractBehavior);
                 }
             }

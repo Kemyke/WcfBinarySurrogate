@@ -23,15 +23,9 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="fe36f47e-df41-4c0b-933d-f0bf7491abdd" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/TestWcfService/Service1/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="e8c4b813-acb0-4245-a1de-882e81ebfc5f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/TestWcfService/Service1/mex" />
-    <MetadataFile FileName="Nexogen.WIRE.Gis.xsd" MetadataType="Schema" ID="b4d3a7f3-96aa-45d8-b05a-9edde1b3f06e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/TestWcfService/Service1/mex" />
-    <MetadataFile FileName="Nexogen.WIRE.Bll.xsd" MetadataType="Schema" ID="a6a19cbc-4985-4d6d-a3fe-268a8dee599f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/TestWcfService/Service1/mex" />
-    <MetadataFile FileName="Nexogen.Utils.xsd" MetadataType="Schema" ID="ebdad76d-120a-446f-9fc1-eb5495a280ee" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/TestWcfService/Service1/mex" />
-    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="08ee86d2-680b-441a-a763-f998d8fef0de" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/TestWcfService/Service1/mex" />
-    <MetadataFile FileName="Nexogen.WIRE.Bll.Entities.xsd" MetadataType="Schema" ID="e9c39d74-81e9-4840-8d62-26988479abf5" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/TestWcfService/Service1/mex" />
-    <MetadataFile FileName="Nexogen.Utils.Time.xsd" MetadataType="Schema" ID="c5f62aa6-e894-445f-a380-4f39187c7126" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/TestWcfService/Service1/mex" />
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="6b1d14dc-68f5-4f93-a065-e1116c1f069b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/TestWcfService/Service1/mex" />
-    <MetadataFile FileName="WcfBinarySurrogate.xsd" MetadataType="Schema" ID="1115c79d-9c44-42a2-b419-897a17595afe" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/TestWcfService/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="e8c4b813-acb0-4245-a1de-882e81ebfc5f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/TestWcfService/Service1/mex" />
+    <MetadataFile FileName="TestWcfService1.xsd" MetadataType="Schema" ID="c0c63e86-04c5-40e8-bb38-07f3ff5424b3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/TestWcfService/Service1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

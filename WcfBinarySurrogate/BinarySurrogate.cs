@@ -13,12 +13,13 @@ namespace WcfBinarySurrogate
 {
     public class BinarySurrogate : IDataContractSurrogate
     {
-        private Type[] surrogatedTypes = new Type[] { typeof(CustomChild) };
-        private Type[] surrogatedInterfaces = new Type[] { typeof(IEnumerable<CustomChild>) };
+        private IEnumerable<Type> surrogatedTypes;
 
-        public BinarySurrogate()
+        public BinarySurrogate(IBinarySerializedTypeProvider typeProvider)
         {
-            var notSeriazableTypes = surrogatedTypes.Where(t => !t.GetCustomAttributes(typeof(SerializableAttribute), false).Any()).Select(t=>t.Name);
+            this.surrogatedTypes = typeProvider.GetBinarySerializableTypes();
+
+            var notSeriazableTypes = surrogatedTypes.Where(t => !t.IsInterface && !t.GetCustomAttributes(typeof(SerializableAttribute), false).Any()).Select(t=>t.Name);
             if (notSeriazableTypes.Any())
             {
                 throw new ArgumentException(string.Format("Type must be attibuted with Serializable attribute! Non-attibutes classes: {0}.", string.Join(",", notSeriazableTypes)));
@@ -27,7 +28,7 @@ namespace WcfBinarySurrogate
 
         public Type GetDataContractType(Type type)
         {
-            if (surrogatedTypes.Contains(type) || surrogatedInterfaces.Contains(type))
+            if (surrogatedTypes.Contains(type))
             {
                 return typeof(BinaryStringContainer);
             }

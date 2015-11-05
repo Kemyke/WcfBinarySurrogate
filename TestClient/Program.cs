@@ -5,6 +5,7 @@ using System.ServiceModel.Description;
 using System.Text;
 using System.Threading.Tasks;
 using TestClient.TestServiceReference;
+using TestWcfService;
 using WcfBinarySurrogate;
 
 namespace TestClient
@@ -30,7 +31,7 @@ namespace TestClient
             {
                 if (dcsOperationBehavior.DataContractSurrogate == null)
                 {
-                    dcsOperationBehavior.DataContractSurrogate = new BinarySurrogate();
+                    dcsOperationBehavior.DataContractSurrogate = new BinarySurrogate(new MyBinarySerializedTypeProvider());
                 }
             }
         }
