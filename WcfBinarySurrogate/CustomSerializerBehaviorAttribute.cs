@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace XmlSerializerTest
+namespace WcfBinarySurrogate
 {
     public class UseBinarySurrogateBehaviorAttribute : Attribute, IContractBehavior
     {

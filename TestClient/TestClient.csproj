@@ -41,7 +41,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="XmlSerializerTest, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -54,7 +53,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\Nexogen.WIRE.Gis.Route.datasource" />
+    <None Include="Properties\DataSources\WcfBinarySurrogate.ParentClass.datasource" />
     <None Include="Properties\DataSources\XmlSerializerTest.ParentClass.datasource" />
+    <None Include="Service References\TestServiceReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestServiceReference\Nexogen.Utils.Time.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestServiceReference\Nexogen.Utils.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestServiceReference\Nexogen.WIRE.Bll.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestServiceReference\Nexogen.WIRE.Bll.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestServiceReference\Nexogen.WIRE.Gis.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\TestServiceReference\service.wsdl" />
     <None Include="Service References\TestServiceReference\service.xsd">
       <SubType>Designer</SubType>
@@ -62,7 +81,10 @@
     <None Include="Service References\TestServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TestServiceReference\XmlSerializerTest.xsd">
+    <None Include="Service References\TestServiceReference\TestClient.TestServiceReference.Route.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestServiceReference\WcfBinarySurrogate.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

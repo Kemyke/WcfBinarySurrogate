@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using XmlSerializerTest;
+using WcfBinarySurrogate;
 
 namespace TestWcfService
 {
@@ -16,6 +16,7 @@ namespace TestWcfService
             ret.NormalChild = new NormalChild() { Name = "normalchild", Value = value };
             ret.CustomChild = new CustomChild() { Name = "customchild", Value = value };
             ret.CustomChildren = new List<CustomChild>() { new CustomChild() { Name = "customchild", Value = value * 2 } };
+
             return ret;
         }
     }

@@ -9,17 +9,5662 @@
 //------------------------------------------------------------------------------
 
 namespace TestClient.TestServiceReference {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RouteInfo", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Route))]
+    public partial class RouteInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.RouteArguments ArgumentsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.BoundingBox BoundingBoxField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.DistanceDurationCost DataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int HighwayDistanceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TollRoadDistanceField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.RouteArguments Arguments {
+            get {
+                return this.ArgumentsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ArgumentsField, value) != true)) {
+                    this.ArgumentsField = value;
+                    this.RaisePropertyChanged("Arguments");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.BoundingBox BoundingBox {
+            get {
+                return this.BoundingBoxField;
+            }
+            set {
+                if ((this.BoundingBoxField.Equals(value) != true)) {
+                    this.BoundingBoxField = value;
+                    this.RaisePropertyChanged("BoundingBox");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.DistanceDurationCost Data {
+            get {
+                return this.DataField;
+            }
+            set {
+                if ((this.DataField.Equals(value) != true)) {
+                    this.DataField = value;
+                    this.RaisePropertyChanged("Data");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int HighwayDistance {
+            get {
+                return this.HighwayDistanceField;
+            }
+            set {
+                if ((this.HighwayDistanceField.Equals(value) != true)) {
+                    this.HighwayDistanceField = value;
+                    this.RaisePropertyChanged("HighwayDistance");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TollRoadDistance {
+            get {
+                return this.TollRoadDistanceField;
+            }
+            set {
+                if ((this.TollRoadDistanceField.Equals(value) != true)) {
+                    this.TollRoadDistanceField = value;
+                    this.RaisePropertyChanged("TollRoadDistance");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RouteArguments", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial class RouteArguments : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int[] ExceptionIdsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.UGeoId[][] ExceptionPathsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.RouteOptions OptionsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] SelectedCountriesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte SelectorField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int[] ExceptionIds {
+            get {
+                return this.ExceptionIdsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExceptionIdsField, value) != true)) {
+                    this.ExceptionIdsField = value;
+                    this.RaisePropertyChanged("ExceptionIds");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.UGeoId[][] ExceptionPaths {
+            get {
+                return this.ExceptionPathsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExceptionPathsField, value) != true)) {
+                    this.ExceptionPathsField = value;
+                    this.RaisePropertyChanged("ExceptionPaths");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.RouteOptions Options {
+            get {
+                return this.OptionsField;
+            }
+            set {
+                if ((this.OptionsField.Equals(value) != true)) {
+                    this.OptionsField = value;
+                    this.RaisePropertyChanged("Options");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] SelectedCountries {
+            get {
+                return this.SelectedCountriesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SelectedCountriesField, value) != true)) {
+                    this.SelectedCountriesField = value;
+                    this.RaisePropertyChanged("SelectedCountries");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte Selector {
+            get {
+                return this.SelectorField;
+            }
+            set {
+                if ((this.SelectorField.Equals(value) != true)) {
+                    this.SelectorField = value;
+                    this.RaisePropertyChanged("Selector");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BoundingBox", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial struct BoundingBox : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.GeoPointValue BottomRightField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.GeoPointValue TopLeftField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.GeoPointValue BottomRight {
+            get {
+                return this.BottomRightField;
+            }
+            set {
+                if ((this.BottomRightField.Equals(value) != true)) {
+                    this.BottomRightField = value;
+                    this.RaisePropertyChanged("BottomRight");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.GeoPointValue TopLeft {
+            get {
+                return this.TopLeftField;
+            }
+            set {
+                if ((this.TopLeftField.Equals(value) != true)) {
+                    this.TopLeftField = value;
+                    this.RaisePropertyChanged("TopLeft");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DistanceDurationCost", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial struct DistanceDurationCost : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DistanceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DurationField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Cost {
+            get {
+                return this.CostField;
+            }
+            set {
+                if ((this.CostField.Equals(value) != true)) {
+                    this.CostField = value;
+                    this.RaisePropertyChanged("Cost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Distance {
+            get {
+                return this.DistanceField;
+            }
+            set {
+                if ((this.DistanceField.Equals(value) != true)) {
+                    this.DistanceField = value;
+                    this.RaisePropertyChanged("Distance");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Duration {
+            get {
+                return this.DurationField;
+            }
+            set {
+                if ((this.DurationField.Equals(value) != true)) {
+                    this.DurationField = value;
+                    this.RaisePropertyChanged("Duration");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Route", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial class Route : TestClient.TestServiceReference.RouteInfo {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Maneuver[] ManeuversField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.UGeoId[] NodesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.GeoPolygon PolygonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Segment[] SegmentsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Waypoint[] WaypointsField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.Maneuver[] Maneuvers {
+            get {
+                return this.ManeuversField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ManeuversField, value) != true)) {
+                    this.ManeuversField = value;
+                    this.RaisePropertyChanged("Maneuvers");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.UGeoId[] Nodes {
+            get {
+                return this.NodesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NodesField, value) != true)) {
+                    this.NodesField = value;
+                    this.RaisePropertyChanged("Nodes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.GeoPolygon Polygon {
+            get {
+                return this.PolygonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PolygonField, value) != true)) {
+                    this.PolygonField = value;
+                    this.RaisePropertyChanged("Polygon");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.Segment[] Segments {
+            get {
+                return this.SegmentsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SegmentsField, value) != true)) {
+                    this.SegmentsField = value;
+                    this.RaisePropertyChanged("Segments");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.Waypoint[] Waypoints {
+            get {
+                return this.WaypointsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WaypointsField, value) != true)) {
+                    this.WaypointsField = value;
+                    this.RaisePropertyChanged("Waypoints");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GeoPolygon", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountry[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountry))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPoint))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountryValue[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountryValue))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPosition[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPosition))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionValue[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionValue))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountry[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountry))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountryValue[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountryValue))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Route))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RouteInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RouteArguments))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.UGeoId[][]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.UGeoId[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.UGeoId))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RouteOptions))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.BoundingBox))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointValue))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.DistanceDurationCost))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Maneuver[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Maneuver))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.ManeuverType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Segment[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Segment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.BrunnelCode))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Waypoint[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Waypoint))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WaypointType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointValue[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPoint[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Location[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Location))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Track[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Track))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.AETR561Errors))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.QualcommSupposableErrors))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.QualcommConsistencyErrors))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.CommonData))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Poi[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Poi))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Ticket[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Ticket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.TicketCategory))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.TicketSeverity))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.PoiCostAvability[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.PoiCostAvability))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.LocationType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.SuperstructureGroup))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RoutingData))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Tour[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Tour))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Operator[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Operator))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.OperatorType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Task[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Task))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.CargoType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Resource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Driver[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Driver))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.QualcommState))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.QualcommActivity))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.VASType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.DriverTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.ResourceTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.ExceptionTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.LocationTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.TaskTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.PoiLocationTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.IntSeconds))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.IntEuroCents))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.Dictionary<int, string>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(int[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(object[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.Dictionary<int, TestClient.TestServiceReference.SuperstructureGroup>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(string[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.DateTime[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.TicketHolderBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.SingleSchedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.ScheduleBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule.DailyInterval[][]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule.DailyInterval[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule.DailyInterval))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.YearlySchedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfBinarySurrogate.ParentClass))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfBinarySurrogate.CustomChild))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfBinarySurrogate.CustomChild[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfBinarySurrogate.NormalChild))]
+    public partial class GeoPolygon : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private object[] PointsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public object[] Points {
+            get {
+                return this.PointsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PointsField, value) != true)) {
+                    this.PointsField = value;
+                    this.RaisePropertyChanged("Points");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Maneuver", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial struct Maneuver : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InstructionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SucceedingSegmentIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.ManeuverType TypeField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Instruction {
+            get {
+                return this.InstructionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InstructionField, value) != true)) {
+                    this.InstructionField = value;
+                    this.RaisePropertyChanged("Instruction");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SucceedingSegmentIndex {
+            get {
+                return this.SucceedingSegmentIndexField;
+            }
+            set {
+                if ((this.SucceedingSegmentIndexField.Equals(value) != true)) {
+                    this.SucceedingSegmentIndexField = value;
+                    this.RaisePropertyChanged("SucceedingSegmentIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.ManeuverType Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((this.TypeField.Equals(value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UGeoId", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial struct UGeoId : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int iuCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int nField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long tIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int xOffField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int yOffField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int iuCode {
+            get {
+                return this.iuCodeField;
+            }
+            set {
+                if ((this.iuCodeField.Equals(value) != true)) {
+                    this.iuCodeField = value;
+                    this.RaisePropertyChanged("iuCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int n {
+            get {
+                return this.nField;
+            }
+            set {
+                if ((this.nField.Equals(value) != true)) {
+                    this.nField = value;
+                    this.RaisePropertyChanged("n");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long tID {
+            get {
+                return this.tIDField;
+            }
+            set {
+                if ((this.tIDField.Equals(value) != true)) {
+                    this.tIDField = value;
+                    this.RaisePropertyChanged("tID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int xOff {
+            get {
+                return this.xOffField;
+            }
+            set {
+                if ((this.xOffField.Equals(value) != true)) {
+                    this.xOffField = value;
+                    this.RaisePropertyChanged("xOff");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int yOff {
+            get {
+                return this.yOffField;
+            }
+            set {
+                if ((this.yOffField.Equals(value) != true)) {
+                    this.yOffField = value;
+                    this.RaisePropertyChanged("yOff");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Segment", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial struct Segment : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AccumulatedDistanceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AccumulatedTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.BrunnelCode BrunnelCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FirstNodeIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FirstPolygonIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool HasExtraTollField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool HasNamedTollField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool HasTollField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool HasVignetteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsFerryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsPiggyBackField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NodeCountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PolygonCountField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AccumulatedDistance {
+            get {
+                return this.AccumulatedDistanceField;
+            }
+            set {
+                if ((this.AccumulatedDistanceField.Equals(value) != true)) {
+                    this.AccumulatedDistanceField = value;
+                    this.RaisePropertyChanged("AccumulatedDistance");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AccumulatedTime {
+            get {
+                return this.AccumulatedTimeField;
+            }
+            set {
+                if ((this.AccumulatedTimeField.Equals(value) != true)) {
+                    this.AccumulatedTimeField = value;
+                    this.RaisePropertyChanged("AccumulatedTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.BrunnelCode BrunnelCode {
+            get {
+                return this.BrunnelCodeField;
+            }
+            set {
+                if ((this.BrunnelCodeField.Equals(value) != true)) {
+                    this.BrunnelCodeField = value;
+                    this.RaisePropertyChanged("BrunnelCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FirstNodeIndex {
+            get {
+                return this.FirstNodeIndexField;
+            }
+            set {
+                if ((this.FirstNodeIndexField.Equals(value) != true)) {
+                    this.FirstNodeIndexField = value;
+                    this.RaisePropertyChanged("FirstNodeIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FirstPolygonIndex {
+            get {
+                return this.FirstPolygonIndexField;
+            }
+            set {
+                if ((this.FirstPolygonIndexField.Equals(value) != true)) {
+                    this.FirstPolygonIndexField = value;
+                    this.RaisePropertyChanged("FirstPolygonIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool HasExtraToll {
+            get {
+                return this.HasExtraTollField;
+            }
+            set {
+                if ((this.HasExtraTollField.Equals(value) != true)) {
+                    this.HasExtraTollField = value;
+                    this.RaisePropertyChanged("HasExtraToll");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool HasNamedToll {
+            get {
+                return this.HasNamedTollField;
+            }
+            set {
+                if ((this.HasNamedTollField.Equals(value) != true)) {
+                    this.HasNamedTollField = value;
+                    this.RaisePropertyChanged("HasNamedToll");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool HasToll {
+            get {
+                return this.HasTollField;
+            }
+            set {
+                if ((this.HasTollField.Equals(value) != true)) {
+                    this.HasTollField = value;
+                    this.RaisePropertyChanged("HasToll");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool HasVignette {
+            get {
+                return this.HasVignetteField;
+            }
+            set {
+                if ((this.HasVignetteField.Equals(value) != true)) {
+                    this.HasVignetteField = value;
+                    this.RaisePropertyChanged("HasVignette");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsFerry {
+            get {
+                return this.IsFerryField;
+            }
+            set {
+                if ((this.IsFerryField.Equals(value) != true)) {
+                    this.IsFerryField = value;
+                    this.RaisePropertyChanged("IsFerry");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsPiggyBack {
+            get {
+                return this.IsPiggyBackField;
+            }
+            set {
+                if ((this.IsPiggyBackField.Equals(value) != true)) {
+                    this.IsPiggyBackField = value;
+                    this.RaisePropertyChanged("IsPiggyBack");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int NodeCount {
+            get {
+                return this.NodeCountField;
+            }
+            set {
+                if ((this.NodeCountField.Equals(value) != true)) {
+                    this.NodeCountField = value;
+                    this.RaisePropertyChanged("NodeCount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PolygonCount {
+            get {
+                return this.PolygonCountField;
+            }
+            set {
+                if ((this.PolygonCountField.Equals(value) != true)) {
+                    this.PolygonCountField = value;
+                    this.RaisePropertyChanged("PolygonCount");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Waypoint", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial class Waypoint : TestClient.TestServiceReference.GeoPoint {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AccumulatedDistanceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AccumulatedTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ManeuverIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NodeBehindIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int OutgoingSegmentIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PolygonBehindIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.WaypointType TypeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AccumulatedDistance {
+            get {
+                return this.AccumulatedDistanceField;
+            }
+            set {
+                if ((this.AccumulatedDistanceField.Equals(value) != true)) {
+                    this.AccumulatedDistanceField = value;
+                    this.RaisePropertyChanged("AccumulatedDistance");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AccumulatedTime {
+            get {
+                return this.AccumulatedTimeField;
+            }
+            set {
+                if ((this.AccumulatedTimeField.Equals(value) != true)) {
+                    this.AccumulatedTimeField = value;
+                    this.RaisePropertyChanged("AccumulatedTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ManeuverIndex {
+            get {
+                return this.ManeuverIndexField;
+            }
+            set {
+                if ((this.ManeuverIndexField.Equals(value) != true)) {
+                    this.ManeuverIndexField = value;
+                    this.RaisePropertyChanged("ManeuverIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int NodeBehindIndex {
+            get {
+                return this.NodeBehindIndexField;
+            }
+            set {
+                if ((this.NodeBehindIndexField.Equals(value) != true)) {
+                    this.NodeBehindIndexField = value;
+                    this.RaisePropertyChanged("NodeBehindIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int OutgoingSegmentIndex {
+            get {
+                return this.OutgoingSegmentIndexField;
+            }
+            set {
+                if ((this.OutgoingSegmentIndexField.Equals(value) != true)) {
+                    this.OutgoingSegmentIndexField = value;
+                    this.RaisePropertyChanged("OutgoingSegmentIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PolygonBehindIndex {
+            get {
+                return this.PolygonBehindIndexField;
+            }
+            set {
+                if ((this.PolygonBehindIndexField.Equals(value) != true)) {
+                    this.PolygonBehindIndexField = value;
+                    this.RaisePropertyChanged("PolygonBehindIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.WaypointType Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((this.TypeField.Equals(value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.FlagsAttribute()]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RouteOptions", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    public enum RouteOptions : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        None = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        UseGeodataSourcePermanent = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DisableTruckAttributes = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        EnableSegmentViolation = 8,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        EnableFerry = 16,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        UseFuzzyRouting = 32,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        EnableWromholeSegmentViolation = 64,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GeoPointValue", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial struct GeoPointValue : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double LatitudeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double LongitudeField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Latitude {
+            get {
+                return this.LatitudeField;
+            }
+            set {
+                if ((this.LatitudeField.Equals(value) != true)) {
+                    this.LatitudeField = value;
+                    this.RaisePropertyChanged("Latitude");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Longitude {
+            get {
+                return this.LongitudeField;
+            }
+            set {
+                if ((this.LongitudeField.Equals(value) != true)) {
+                    this.LongitudeField = value;
+                    this.RaisePropertyChanged("Longitude");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ManeuverType", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    public enum ManeuverType : byte {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        FURTHER = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        KEEP = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        TURN = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        UTURN = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ENTER = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        EXIT = 5,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ENTER_ROUNDABOUT = 6,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        STAY_IN_ROUNDABOUT = 7,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        EXIT_ROUNDABOUT = 8,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        CHANGE_HIGHWAY = 9,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ENTER_FERRY_OR_PB = 10,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        EXIT_FERRY_OR_PB = 11,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        EXIT_ROUNDABOUT_AND_ENTER = 12,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        EXIT_ROUNDABOUT_AND_ENTER_FERRY = 13,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GeoPointWithCountry", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial class GeoPointWithCountry : TestClient.TestServiceReference.GeoPoint {
+        
+        private byte Countryk__BackingFieldField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="<Country>k__BackingField", IsRequired=true)]
+        public byte Countryk__BackingField {
+            get {
+                return this.Countryk__BackingFieldField;
+            }
+            set {
+                if ((this.Countryk__BackingFieldField.Equals(value) != true)) {
+                    this.Countryk__BackingFieldField = value;
+                    this.RaisePropertyChanged("Countryk__BackingField");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GeoPoint", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountry))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPosition))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountry))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Location))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Track))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Waypoint))]
+    public partial class GeoPoint : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double LatitudeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double LongitudeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Latitude {
+            get {
+                return this.LatitudeField;
+            }
+            set {
+                if ((this.LatitudeField.Equals(value) != true)) {
+                    this.LatitudeField = value;
+                    this.RaisePropertyChanged("Latitude");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Longitude {
+            get {
+                return this.LongitudeField;
+            }
+            set {
+                if ((this.LongitudeField.Equals(value) != true)) {
+                    this.LongitudeField = value;
+                    this.RaisePropertyChanged("Longitude");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GeoPointWithCountryValue", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial struct GeoPointWithCountryValue : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private byte Countryk__BackingFieldField;
+        
+        private double Latitudek__BackingFieldField;
+        
+        private double Longitudek__BackingFieldField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="<Country>k__BackingField", IsRequired=true)]
+        public byte Countryk__BackingField {
+            get {
+                return this.Countryk__BackingFieldField;
+            }
+            set {
+                if ((this.Countryk__BackingFieldField.Equals(value) != true)) {
+                    this.Countryk__BackingFieldField = value;
+                    this.RaisePropertyChanged("Countryk__BackingField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="<Latitude>k__BackingField", IsRequired=true)]
+        public double Latitudek__BackingField {
+            get {
+                return this.Latitudek__BackingFieldField;
+            }
+            set {
+                if ((this.Latitudek__BackingFieldField.Equals(value) != true)) {
+                    this.Latitudek__BackingFieldField = value;
+                    this.RaisePropertyChanged("Latitudek__BackingField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="<Longitude>k__BackingField", IsRequired=true)]
+        public double Longitudek__BackingField {
+            get {
+                return this.Longitudek__BackingFieldField;
+            }
+            set {
+                if ((this.Longitudek__BackingFieldField.Equals(value) != true)) {
+                    this.Longitudek__BackingFieldField = value;
+                    this.RaisePropertyChanged("Longitudek__BackingField");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GeoPosition", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountry))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Location))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Track))]
+    public partial class GeoPosition : TestClient.TestServiceReference.GeoPoint {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> HeadingField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> Heading {
+            get {
+                return this.HeadingField;
+            }
+            set {
+                if ((this.HeadingField.Equals(value) != true)) {
+                    this.HeadingField = value;
+                    this.RaisePropertyChanged("Heading");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GeoPositionValue", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial struct GeoPositionValue : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private System.Nullable<short> Headingk__BackingFieldField;
+        
+        private double Latitudek__BackingFieldField;
+        
+        private double Longitudek__BackingFieldField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="<Heading>k__BackingField", IsRequired=true)]
+        public System.Nullable<short> Headingk__BackingField {
+            get {
+                return this.Headingk__BackingFieldField;
+            }
+            set {
+                if ((this.Headingk__BackingFieldField.Equals(value) != true)) {
+                    this.Headingk__BackingFieldField = value;
+                    this.RaisePropertyChanged("Headingk__BackingField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="<Latitude>k__BackingField", IsRequired=true)]
+        public double Latitudek__BackingField {
+            get {
+                return this.Latitudek__BackingFieldField;
+            }
+            set {
+                if ((this.Latitudek__BackingFieldField.Equals(value) != true)) {
+                    this.Latitudek__BackingFieldField = value;
+                    this.RaisePropertyChanged("Latitudek__BackingField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="<Longitude>k__BackingField", IsRequired=true)]
+        public double Longitudek__BackingField {
+            get {
+                return this.Longitudek__BackingFieldField;
+            }
+            set {
+                if ((this.Longitudek__BackingFieldField.Equals(value) != true)) {
+                    this.Longitudek__BackingFieldField = value;
+                    this.RaisePropertyChanged("Longitudek__BackingField");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GeoPositionWithCountry", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Location))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Track))]
+    public partial class GeoPositionWithCountry : TestClient.TestServiceReference.GeoPosition {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte CountryField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte Country {
+            get {
+                return this.CountryField;
+            }
+            set {
+                if ((this.CountryField.Equals(value) != true)) {
+                    this.CountryField = value;
+                    this.RaisePropertyChanged("Country");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GeoPositionWithCountryValue", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    [System.SerializableAttribute()]
+    public partial struct GeoPositionWithCountryValue : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private byte Countryk__BackingFieldField;
+        
+        private System.Nullable<short> Headingk__BackingFieldField;
+        
+        private double Latitudek__BackingFieldField;
+        
+        private double Longitudek__BackingFieldField;
+        
+        private int hashField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="<Country>k__BackingField", IsRequired=true)]
+        public byte Countryk__BackingField {
+            get {
+                return this.Countryk__BackingFieldField;
+            }
+            set {
+                if ((this.Countryk__BackingFieldField.Equals(value) != true)) {
+                    this.Countryk__BackingFieldField = value;
+                    this.RaisePropertyChanged("Countryk__BackingField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="<Heading>k__BackingField", IsRequired=true)]
+        public System.Nullable<short> Headingk__BackingField {
+            get {
+                return this.Headingk__BackingFieldField;
+            }
+            set {
+                if ((this.Headingk__BackingFieldField.Equals(value) != true)) {
+                    this.Headingk__BackingFieldField = value;
+                    this.RaisePropertyChanged("Headingk__BackingField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="<Latitude>k__BackingField", IsRequired=true)]
+        public double Latitudek__BackingField {
+            get {
+                return this.Latitudek__BackingFieldField;
+            }
+            set {
+                if ((this.Latitudek__BackingFieldField.Equals(value) != true)) {
+                    this.Latitudek__BackingFieldField = value;
+                    this.RaisePropertyChanged("Latitudek__BackingField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="<Longitude>k__BackingField", IsRequired=true)]
+        public double Longitudek__BackingField {
+            get {
+                return this.Longitudek__BackingFieldField;
+            }
+            set {
+                if ((this.Longitudek__BackingFieldField.Equals(value) != true)) {
+                    this.Longitudek__BackingFieldField = value;
+                    this.RaisePropertyChanged("Longitudek__BackingField");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int hash {
+            get {
+                return this.hashField;
+            }
+            set {
+                if ((this.hashField.Equals(value) != true)) {
+                    this.hashField = value;
+                    this.RaisePropertyChanged("hash");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BrunnelCode", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    public enum BrunnelCode : byte {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        NOTHING = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        BRIDGE_OVER_WATER = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        TUNNEL_UNDER_WATER = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        BRIDGE_OVER_TRAIN = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        TUNNEL_UNDER_TRAIN = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        BRIDGE_OVER_STREET = 5,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        TUNNEL_UNDER_STREET = 6,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        BRIDGE = 7,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        TUNNEL = 8,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WaypointType", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis")]
+    public enum WaypointType : byte {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        UNKNOWN = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        START = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        VIA = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        END = 2,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Location", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class Location : TestClient.TestServiceReference.GeoPositionWithCountry {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LocationIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ZipCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LocationId {
+            get {
+                return this.LocationIdField;
+            }
+            set {
+                if ((this.LocationIdField.Equals(value) != true)) {
+                    this.LocationIdField = value;
+                    this.RaisePropertyChanged("LocationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ZipCode {
+            get {
+                return this.ZipCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ZipCodeField, value) != true)) {
+                    this.ZipCodeField = value;
+                    this.RaisePropertyChanged("ZipCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public string Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Track", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class Track : TestClient.TestServiceReference.GeoPositionWithCountry {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int OdoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime TSField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Odo {
+            get {
+                return this.OdoField;
+            }
+            set {
+                if ((this.OdoField.Equals(value) != true)) {
+                    this.OdoField = value;
+                    this.RaisePropertyChanged("Odo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime TS {
+            get {
+                return this.TSField;
+            }
+            set {
+                if ((this.TSField.Equals(value) != true)) {
+                    this.TSField = value;
+                    this.RaisePropertyChanged("TS");
+                }
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AETR561Errors", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    public enum AETR561Errors : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        None = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ContiguousDrivingTime = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ContiguousWorkingTime = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DailyDrivingTime = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DailyWorkingTime = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        FortnightlyDrivingTime = 5,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        WeeklyDrivingTime = 6,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DayLength = 7,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        OperationalWeekTime = 8,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        NumberOfExtendedDrivingPeriods = 9,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        NumberOfReducedRestPeriods = 10,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        PermittedNumberOfWeeksFromLastNotReducedWeeklyRest = 11,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        WeekLength = 12,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DayTime = 13,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.FlagsAttribute()]
+    [System.Runtime.Serialization.DataContractAttribute(Name="QualcommSupposableErrors", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    public enum QualcommSupposableErrors : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        None = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DayDrive = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        WeekDrive = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        FortnightyDrive = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ContinousDrive = 8,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        WeekRestCompensationTotal = 16,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        WeekRestCompensation = 32,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ContinousLabourShort = 64,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ExtendedDriving = 128,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ReducedDayRests = 256,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        SplitDayRest = 512,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DayDuty = 1024,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        NumberOfWeeksFromLastNotReducedWeeklyRest = 2048,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.FlagsAttribute()]
+    [System.Runtime.Serialization.DataContractAttribute(Name="QualcommConsistencyErrors", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    public enum QualcommConsistencyErrors : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        None = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DurationExceedsContinousLabourShort = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DurationExceedsContinuousDrive = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        WeekRestCompensationExceedsWeekRestCompensationTotal = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        StartDayExceedsLastEvent = 8,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        StartOpWeekExceedsStartDay = 16,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ContinuousLabourShortExceedsDayDuty = 32,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DayDriveExceedsDayDuty = 64,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ContinuousDriveExceedsDayDrive = 128,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DayDriveExceedsWeekDrive = 256,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        WeekDriveExceedsFortnightlyDrive = 512,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DurationExceedsDayDuty = 1024,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CommonData", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RoutingData))]
+    public partial class CommonData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<int, string> OrganizationsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Poi[] PoisField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<int, string> SaddleHeightsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<int, TestClient.TestServiceReference.SuperstructureGroup> SuperstructureGroupsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<int, string> SuperstructureTypesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime TimeStampField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.Dictionary<int, string> Organizations {
+            get {
+                return this.OrganizationsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrganizationsField, value) != true)) {
+                    this.OrganizationsField = value;
+                    this.RaisePropertyChanged("Organizations");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.Poi[] Pois {
+            get {
+                return this.PoisField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PoisField, value) != true)) {
+                    this.PoisField = value;
+                    this.RaisePropertyChanged("Pois");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.Dictionary<int, string> SaddleHeights {
+            get {
+                return this.SaddleHeightsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SaddleHeightsField, value) != true)) {
+                    this.SaddleHeightsField = value;
+                    this.RaisePropertyChanged("SaddleHeights");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.Dictionary<int, TestClient.TestServiceReference.SuperstructureGroup> SuperstructureGroups {
+            get {
+                return this.SuperstructureGroupsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SuperstructureGroupsField, value) != true)) {
+                    this.SuperstructureGroupsField = value;
+                    this.RaisePropertyChanged("SuperstructureGroups");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.Dictionary<int, string> SuperstructureTypes {
+            get {
+                return this.SuperstructureTypesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SuperstructureTypesField, value) != true)) {
+                    this.SuperstructureTypesField = value;
+                    this.RaisePropertyChanged("SuperstructureTypes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime TimeStamp {
+            get {
+                return this.TimeStampField;
+            }
+            set {
+                if ((this.TimeStampField.Equals(value) != true)) {
+                    this.TimeStampField = value;
+                    this.RaisePropertyChanged("TimeStamp");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Poi", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class Poi : TestClient.TestServiceReference.TicketHolderBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.PoiCostAvability[] CostsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DistanceMetersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Location EndLocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool HasAdBlueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PoiIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float RelativeFuelCostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool RestOnFerryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte SafetyLevelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Location StartLocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.TimeSpan TravelDurationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.LocationType TypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Route WormholeRouteField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.PoiCostAvability[] Costs {
+            get {
+                return this.CostsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CostsField, value) != true)) {
+                    this.CostsField = value;
+                    this.RaisePropertyChanged("Costs");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DistanceMeters {
+            get {
+                return this.DistanceMetersField;
+            }
+            set {
+                if ((this.DistanceMetersField.Equals(value) != true)) {
+                    this.DistanceMetersField = value;
+                    this.RaisePropertyChanged("DistanceMeters");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.Location EndLocation {
+            get {
+                return this.EndLocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EndLocationField, value) != true)) {
+                    this.EndLocationField = value;
+                    this.RaisePropertyChanged("EndLocation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool HasAdBlue {
+            get {
+                return this.HasAdBlueField;
+            }
+            set {
+                if ((this.HasAdBlueField.Equals(value) != true)) {
+                    this.HasAdBlueField = value;
+                    this.RaisePropertyChanged("HasAdBlue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PoiId {
+            get {
+                return this.PoiIdField;
+            }
+            set {
+                if ((this.PoiIdField.Equals(value) != true)) {
+                    this.PoiIdField = value;
+                    this.RaisePropertyChanged("PoiId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float RelativeFuelCost {
+            get {
+                return this.RelativeFuelCostField;
+            }
+            set {
+                if ((this.RelativeFuelCostField.Equals(value) != true)) {
+                    this.RelativeFuelCostField = value;
+                    this.RaisePropertyChanged("RelativeFuelCost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool RestOnFerry {
+            get {
+                return this.RestOnFerryField;
+            }
+            set {
+                if ((this.RestOnFerryField.Equals(value) != true)) {
+                    this.RestOnFerryField = value;
+                    this.RaisePropertyChanged("RestOnFerry");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte SafetyLevel {
+            get {
+                return this.SafetyLevelField;
+            }
+            set {
+                if ((this.SafetyLevelField.Equals(value) != true)) {
+                    this.SafetyLevelField = value;
+                    this.RaisePropertyChanged("SafetyLevel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.Location StartLocation {
+            get {
+                return this.StartLocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StartLocationField, value) != true)) {
+                    this.StartLocationField = value;
+                    this.RaisePropertyChanged("StartLocation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.TimeSpan TravelDuration {
+            get {
+                return this.TravelDurationField;
+            }
+            set {
+                if ((this.TravelDurationField.Equals(value) != true)) {
+                    this.TravelDurationField = value;
+                    this.RaisePropertyChanged("TravelDuration");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.LocationType Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((this.TypeField.Equals(value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.Route WormholeRoute {
+            get {
+                return this.WormholeRouteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WormholeRouteField, value) != true)) {
+                    this.WormholeRouteField = value;
+                    this.RaisePropertyChanged("WormholeRoute");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Ticket", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.DriverTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.ResourceTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.ExceptionTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.TaskTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.LocationTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.PoiLocationTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountry[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountry))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPoint))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountryValue[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountryValue))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPosition[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPosition))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionValue[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionValue))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountry[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountry))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountryValue[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountryValue))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Route))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RouteInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RouteArguments))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.UGeoId[][]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.UGeoId[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.UGeoId))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RouteOptions))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.BoundingBox))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointValue))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.DistanceDurationCost))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Maneuver[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Maneuver))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.ManeuverType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPolygon))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Segment[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Segment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.BrunnelCode))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Waypoint[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Waypoint))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WaypointType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointValue[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPoint[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Location[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Location))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Track[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Track))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.AETR561Errors))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.QualcommSupposableErrors))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.QualcommConsistencyErrors))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.CommonData))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Poi[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Poi))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Ticket[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.TicketCategory))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.TicketSeverity))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.PoiCostAvability[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.PoiCostAvability))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.LocationType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.SuperstructureGroup))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RoutingData))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Tour[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Tour))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Operator[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Operator))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.OperatorType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Task[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Task))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.CargoType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Resource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Driver[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Driver))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.QualcommState))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.QualcommActivity))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.VASType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.IntSeconds))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.IntEuroCents))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.Dictionary<int, string>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(int[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(object[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.Dictionary<int, TestClient.TestServiceReference.SuperstructureGroup>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(string[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.DateTime[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.TicketHolderBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.SingleSchedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.ScheduleBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule.DailyInterval[][]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule.DailyInterval[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule.DailyInterval))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.YearlySchedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfBinarySurrogate.ParentClass))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfBinarySurrogate.CustomChild))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfBinarySurrogate.CustomChild[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfBinarySurrogate.NormalChild))]
+    public partial class Ticket : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.TicketCategory CategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private object DataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.TicketSeverity SeverityField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.TicketCategory Category {
+            get {
+                return this.CategoryField;
+            }
+            set {
+                if ((this.CategoryField.Equals(value) != true)) {
+                    this.CategoryField = value;
+                    this.RaisePropertyChanged("Category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public object Data {
+            get {
+                return this.DataField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DataField, value) != true)) {
+                    this.DataField = value;
+                    this.RaisePropertyChanged("Data");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.TicketSeverity Severity {
+            get {
+                return this.SeverityField;
+            }
+            set {
+                if ((this.SeverityField.Equals(value) != true)) {
+                    this.SeverityField = value;
+                    this.RaisePropertyChanged("Severity");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TicketCategory", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    public enum TicketCategory : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Debug = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Data = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Routing = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Erp = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Corridoring = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Incident = 5,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TicketSeverity", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    public enum TicketSeverity : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Debug = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Info = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Warning = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Error = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Critical = 4,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PoiCostAvability", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountry[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountry))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPoint))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountryValue[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointWithCountryValue))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPosition[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPosition))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionValue[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionValue))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountry[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountry))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountryValue[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPositionWithCountryValue))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Route))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RouteInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RouteArguments))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.UGeoId[][]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.UGeoId[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.UGeoId))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RouteOptions))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.BoundingBox))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointValue))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.DistanceDurationCost))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Maneuver[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Maneuver))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.ManeuverType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPolygon))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Segment[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Segment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.BrunnelCode))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Waypoint[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Waypoint))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WaypointType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPointValue[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.GeoPoint[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Location[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Location))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Track[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Track))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.AETR561Errors))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.QualcommSupposableErrors))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.QualcommConsistencyErrors))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.CommonData))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Poi[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Poi))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Ticket[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Ticket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.TicketCategory))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.TicketSeverity))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.PoiCostAvability[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.LocationType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.SuperstructureGroup))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.RoutingData))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Tour[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Tour))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Operator[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Operator))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.OperatorType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Task[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Task))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.CargoType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Resource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Driver[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Driver))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.QualcommState))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.QualcommActivity))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.VASType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.DriverTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.ResourceTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.ExceptionTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.LocationTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.TaskTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.PoiLocationTicket))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.IntSeconds))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.IntEuroCents))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.Dictionary<int, string>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(int[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(object[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.Dictionary<int, TestClient.TestServiceReference.SuperstructureGroup>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(string[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.DateTime[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.TicketHolderBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.SingleSchedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.ScheduleBase))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule.DailyInterval[][]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule.DailyInterval[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule.DailyInterval))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.YearlySchedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfBinarySurrogate.ParentClass))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfBinarySurrogate.CustomChild))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfBinarySurrogate.CustomChild[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WcfBinarySurrogate.NormalChild))]
+    public partial class PoiCostAvability : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float BaseCostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float CostByDriverField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float CostHoursField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float EmissionStandardField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FerryProviderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private object ScheduleField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float BaseCost {
+            get {
+                return this.BaseCostField;
+            }
+            set {
+                if ((this.BaseCostField.Equals(value) != true)) {
+                    this.BaseCostField = value;
+                    this.RaisePropertyChanged("BaseCost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float CostByDriver {
+            get {
+                return this.CostByDriverField;
+            }
+            set {
+                if ((this.CostByDriverField.Equals(value) != true)) {
+                    this.CostByDriverField = value;
+                    this.RaisePropertyChanged("CostByDriver");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float CostHours {
+            get {
+                return this.CostHoursField;
+            }
+            set {
+                if ((this.CostHoursField.Equals(value) != true)) {
+                    this.CostHoursField = value;
+                    this.RaisePropertyChanged("CostHours");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float EmissionStandard {
+            get {
+                return this.EmissionStandardField;
+            }
+            set {
+                if ((this.EmissionStandardField.Equals(value) != true)) {
+                    this.EmissionStandardField = value;
+                    this.RaisePropertyChanged("EmissionStandard");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FerryProvider {
+            get {
+                return this.FerryProviderField;
+            }
+            set {
+                if ((this.FerryProviderField.Equals(value) != true)) {
+                    this.FerryProviderField = value;
+                    this.RaisePropertyChanged("FerryProvider");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public object Schedule {
+            get {
+                return this.ScheduleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ScheduleField, value) != true)) {
+                    this.ScheduleField = value;
+                    this.RaisePropertyChanged("Schedule");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.FlagsAttribute()]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LocationType", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    public enum LocationType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Invalid = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Parking = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Border = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Tunnel = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Ferry = 8,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        GasStation = 16,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Loading = 32,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Unloading = 64,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Customs = 128,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Waypoint = 256,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        HookUp = 512,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        HookDown = 1024,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ObligatoryWaypoint = 2048,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Transload = 4096,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        OtherTask = 8192,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        InitTask = 16384,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DriverChangeDown = 32768,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DriverChangeUp = 65536,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        SiteDest = 131072,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        SiteSource = 262144,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ActualPosition = 524288,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SuperstructureGroup", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class SuperstructureGroup : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PrioirtyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int[] SuperStructureTypesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Prioirty {
+            get {
+                return this.PrioirtyField;
+            }
+            set {
+                if ((this.PrioirtyField.Equals(value) != true)) {
+                    this.PrioirtyField = value;
+                    this.RaisePropertyChanged("Prioirty");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int[] SuperStructureTypes {
+            get {
+                return this.SuperStructureTypesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SuperStructureTypesField, value) != true)) {
+                    this.SuperStructureTypesField = value;
+                    this.RaisePropertyChanged("SuperStructureTypes");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RoutingData", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class RoutingData : TestClient.TestServiceReference.CommonData {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Tour[] ToursField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.Tour[] Tours {
+            get {
+                return this.ToursField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ToursField, value) != true)) {
+                    this.ToursField = value;
+                    this.RaisePropertyChanged("Tours");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Tour", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class Tour : TestClient.TestServiceReference.TicketHolderBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TourIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TourNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OrderInfosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Operator[] OperatorsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Task[] TasksField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool HasBasePlanField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool InProgressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte RequestedParkingSecurityLevelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float LoadedKmField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float EmptyKmField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float CostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Resource ResourceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Track[] PositionsField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TourId {
+            get {
+                return this.TourIdField;
+            }
+            set {
+                if ((this.TourIdField.Equals(value) != true)) {
+                    this.TourIdField = value;
+                    this.RaisePropertyChanged("TourId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TourNumber {
+            get {
+                return this.TourNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TourNumberField, value) != true)) {
+                    this.TourNumberField = value;
+                    this.RaisePropertyChanged("TourNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public string OrderInfos {
+            get {
+                return this.OrderInfosField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrderInfosField, value) != true)) {
+                    this.OrderInfosField = value;
+                    this.RaisePropertyChanged("OrderInfos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public TestClient.TestServiceReference.Operator[] Operators {
+            get {
+                return this.OperatorsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OperatorsField, value) != true)) {
+                    this.OperatorsField = value;
+                    this.RaisePropertyChanged("Operators");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public TestClient.TestServiceReference.Task[] Tasks {
+            get {
+                return this.TasksField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TasksField, value) != true)) {
+                    this.TasksField = value;
+                    this.RaisePropertyChanged("Tasks");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=5)]
+        public bool HasBasePlan {
+            get {
+                return this.HasBasePlanField;
+            }
+            set {
+                if ((this.HasBasePlanField.Equals(value) != true)) {
+                    this.HasBasePlanField = value;
+                    this.RaisePropertyChanged("HasBasePlan");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=6)]
+        public bool InProgress {
+            get {
+                return this.InProgressField;
+            }
+            set {
+                if ((this.InProgressField.Equals(value) != true)) {
+                    this.InProgressField = value;
+                    this.RaisePropertyChanged("InProgress");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=7)]
+        public byte RequestedParkingSecurityLevel {
+            get {
+                return this.RequestedParkingSecurityLevelField;
+            }
+            set {
+                if ((this.RequestedParkingSecurityLevelField.Equals(value) != true)) {
+                    this.RequestedParkingSecurityLevelField = value;
+                    this.RaisePropertyChanged("RequestedParkingSecurityLevel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=8)]
+        public float LoadedKm {
+            get {
+                return this.LoadedKmField;
+            }
+            set {
+                if ((this.LoadedKmField.Equals(value) != true)) {
+                    this.LoadedKmField = value;
+                    this.RaisePropertyChanged("LoadedKm");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=9)]
+        public float EmptyKm {
+            get {
+                return this.EmptyKmField;
+            }
+            set {
+                if ((this.EmptyKmField.Equals(value) != true)) {
+                    this.EmptyKmField = value;
+                    this.RaisePropertyChanged("EmptyKm");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=10)]
+        public float Cost {
+            get {
+                return this.CostField;
+            }
+            set {
+                if ((this.CostField.Equals(value) != true)) {
+                    this.CostField = value;
+                    this.RaisePropertyChanged("Cost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=11)]
+        public TestClient.TestServiceReference.Resource Resource {
+            get {
+                return this.ResourceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ResourceField, value) != true)) {
+                    this.ResourceField = value;
+                    this.RaisePropertyChanged("Resource");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=12)]
+        public TestClient.TestServiceReference.Track[] Positions {
+            get {
+                return this.PositionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PositionsField, value) != true)) {
+                    this.PositionsField = value;
+                    this.RaisePropertyChanged("Positions");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Operator", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class Operator : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.OperatorType TypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.OperatorType Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((this.TypeField.Equals(value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OperatorType", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    public enum OperatorType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Owner = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Assistant = 1,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Task", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class Task : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TaskIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.LocationType TypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OriginalTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PoiIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Poi PoiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Location LocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime StartDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime EndDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsBookedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.CargoType CargoTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float CargoWeightField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsFixedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsCompletedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FerryProviderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int OdoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime EtaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FactEtaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> StartingPositionIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EndingPositionIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float DurationHoursField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<float> FactDurationHoursField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float WaitHoursField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<float> FactWaitHoursField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float FuelLevelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float FuelConsumptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float FuelingLitersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float TollRoadCostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<float> FactTollRoadCostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float OtherRoadCostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float DailyCountryCostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float RestBetweenDriveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float DistanceFromPrevTaskField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<float> FactDistanceFromPrevTaskField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float DrivingFromPrevTaskField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float RemainingDrivingHoursField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Route RouteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime BusinessEtaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool RestEnabledField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TaskId {
+            get {
+                return this.TaskIdField;
+            }
+            set {
+                if ((this.TaskIdField.Equals(value) != true)) {
+                    this.TaskIdField = value;
+                    this.RaisePropertyChanged("TaskId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.LocationType Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((this.TypeField.Equals(value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public string OriginalType {
+            get {
+                return this.OriginalTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OriginalTypeField, value) != true)) {
+                    this.OriginalTypeField = value;
+                    this.RaisePropertyChanged("OriginalType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public int PoiId {
+            get {
+                return this.PoiIdField;
+            }
+            set {
+                if ((this.PoiIdField.Equals(value) != true)) {
+                    this.PoiIdField = value;
+                    this.RaisePropertyChanged("PoiId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public TestClient.TestServiceReference.Poi Poi {
+            get {
+                return this.PoiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PoiField, value) != true)) {
+                    this.PoiField = value;
+                    this.RaisePropertyChanged("Poi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=5)]
+        public TestClient.TestServiceReference.Location Location {
+            get {
+                return this.LocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationField, value) != true)) {
+                    this.LocationField = value;
+                    this.RaisePropertyChanged("Location");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=6)]
+        public System.DateTime StartDate {
+            get {
+                return this.StartDateField;
+            }
+            set {
+                if ((this.StartDateField.Equals(value) != true)) {
+                    this.StartDateField = value;
+                    this.RaisePropertyChanged("StartDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=7)]
+        public System.DateTime EndDate {
+            get {
+                return this.EndDateField;
+            }
+            set {
+                if ((this.EndDateField.Equals(value) != true)) {
+                    this.EndDateField = value;
+                    this.RaisePropertyChanged("EndDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=8)]
+        public bool IsBooked {
+            get {
+                return this.IsBookedField;
+            }
+            set {
+                if ((this.IsBookedField.Equals(value) != true)) {
+                    this.IsBookedField = value;
+                    this.RaisePropertyChanged("IsBooked");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=9)]
+        public TestClient.TestServiceReference.CargoType CargoType {
+            get {
+                return this.CargoTypeField;
+            }
+            set {
+                if ((this.CargoTypeField.Equals(value) != true)) {
+                    this.CargoTypeField = value;
+                    this.RaisePropertyChanged("CargoType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=10)]
+        public float CargoWeight {
+            get {
+                return this.CargoWeightField;
+            }
+            set {
+                if ((this.CargoWeightField.Equals(value) != true)) {
+                    this.CargoWeightField = value;
+                    this.RaisePropertyChanged("CargoWeight");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=11)]
+        public bool IsFixed {
+            get {
+                return this.IsFixedField;
+            }
+            set {
+                if ((this.IsFixedField.Equals(value) != true)) {
+                    this.IsFixedField = value;
+                    this.RaisePropertyChanged("IsFixed");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=12)]
+        public bool IsCompleted {
+            get {
+                return this.IsCompletedField;
+            }
+            set {
+                if ((this.IsCompletedField.Equals(value) != true)) {
+                    this.IsCompletedField = value;
+                    this.RaisePropertyChanged("IsCompleted");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=13)]
+        public int FerryProvider {
+            get {
+                return this.FerryProviderField;
+            }
+            set {
+                if ((this.FerryProviderField.Equals(value) != true)) {
+                    this.FerryProviderField = value;
+                    this.RaisePropertyChanged("FerryProvider");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=14)]
+        public int Odo {
+            get {
+                return this.OdoField;
+            }
+            set {
+                if ((this.OdoField.Equals(value) != true)) {
+                    this.OdoField = value;
+                    this.RaisePropertyChanged("Odo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=15)]
+        public System.DateTime Eta {
+            get {
+                return this.EtaField;
+            }
+            set {
+                if ((this.EtaField.Equals(value) != true)) {
+                    this.EtaField = value;
+                    this.RaisePropertyChanged("Eta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=16)]
+        public System.Nullable<System.DateTime> FactEta {
+            get {
+                return this.FactEtaField;
+            }
+            set {
+                if ((this.FactEtaField.Equals(value) != true)) {
+                    this.FactEtaField = value;
+                    this.RaisePropertyChanged("FactEta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=17)]
+        public System.Nullable<int> StartingPositionIndex {
+            get {
+                return this.StartingPositionIndexField;
+            }
+            set {
+                if ((this.StartingPositionIndexField.Equals(value) != true)) {
+                    this.StartingPositionIndexField = value;
+                    this.RaisePropertyChanged("StartingPositionIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=18)]
+        public System.Nullable<int> EndingPositionIndex {
+            get {
+                return this.EndingPositionIndexField;
+            }
+            set {
+                if ((this.EndingPositionIndexField.Equals(value) != true)) {
+                    this.EndingPositionIndexField = value;
+                    this.RaisePropertyChanged("EndingPositionIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=19)]
+        public float DurationHours {
+            get {
+                return this.DurationHoursField;
+            }
+            set {
+                if ((this.DurationHoursField.Equals(value) != true)) {
+                    this.DurationHoursField = value;
+                    this.RaisePropertyChanged("DurationHours");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=20)]
+        public System.Nullable<float> FactDurationHours {
+            get {
+                return this.FactDurationHoursField;
+            }
+            set {
+                if ((this.FactDurationHoursField.Equals(value) != true)) {
+                    this.FactDurationHoursField = value;
+                    this.RaisePropertyChanged("FactDurationHours");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=21)]
+        public float WaitHours {
+            get {
+                return this.WaitHoursField;
+            }
+            set {
+                if ((this.WaitHoursField.Equals(value) != true)) {
+                    this.WaitHoursField = value;
+                    this.RaisePropertyChanged("WaitHours");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=22)]
+        public System.Nullable<float> FactWaitHours {
+            get {
+                return this.FactWaitHoursField;
+            }
+            set {
+                if ((this.FactWaitHoursField.Equals(value) != true)) {
+                    this.FactWaitHoursField = value;
+                    this.RaisePropertyChanged("FactWaitHours");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=23)]
+        public float FuelLevel {
+            get {
+                return this.FuelLevelField;
+            }
+            set {
+                if ((this.FuelLevelField.Equals(value) != true)) {
+                    this.FuelLevelField = value;
+                    this.RaisePropertyChanged("FuelLevel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=24)]
+        public float FuelConsumption {
+            get {
+                return this.FuelConsumptionField;
+            }
+            set {
+                if ((this.FuelConsumptionField.Equals(value) != true)) {
+                    this.FuelConsumptionField = value;
+                    this.RaisePropertyChanged("FuelConsumption");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=25)]
+        public float FuelingLiters {
+            get {
+                return this.FuelingLitersField;
+            }
+            set {
+                if ((this.FuelingLitersField.Equals(value) != true)) {
+                    this.FuelingLitersField = value;
+                    this.RaisePropertyChanged("FuelingLiters");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=26)]
+        public float TollRoadCost {
+            get {
+                return this.TollRoadCostField;
+            }
+            set {
+                if ((this.TollRoadCostField.Equals(value) != true)) {
+                    this.TollRoadCostField = value;
+                    this.RaisePropertyChanged("TollRoadCost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=27)]
+        public System.Nullable<float> FactTollRoadCost {
+            get {
+                return this.FactTollRoadCostField;
+            }
+            set {
+                if ((this.FactTollRoadCostField.Equals(value) != true)) {
+                    this.FactTollRoadCostField = value;
+                    this.RaisePropertyChanged("FactTollRoadCost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=28)]
+        public float OtherRoadCost {
+            get {
+                return this.OtherRoadCostField;
+            }
+            set {
+                if ((this.OtherRoadCostField.Equals(value) != true)) {
+                    this.OtherRoadCostField = value;
+                    this.RaisePropertyChanged("OtherRoadCost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=29)]
+        public float DailyCountryCost {
+            get {
+                return this.DailyCountryCostField;
+            }
+            set {
+                if ((this.DailyCountryCostField.Equals(value) != true)) {
+                    this.DailyCountryCostField = value;
+                    this.RaisePropertyChanged("DailyCountryCost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=30)]
+        public float RestBetweenDrive {
+            get {
+                return this.RestBetweenDriveField;
+            }
+            set {
+                if ((this.RestBetweenDriveField.Equals(value) != true)) {
+                    this.RestBetweenDriveField = value;
+                    this.RaisePropertyChanged("RestBetweenDrive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=31)]
+        public float DistanceFromPrevTask {
+            get {
+                return this.DistanceFromPrevTaskField;
+            }
+            set {
+                if ((this.DistanceFromPrevTaskField.Equals(value) != true)) {
+                    this.DistanceFromPrevTaskField = value;
+                    this.RaisePropertyChanged("DistanceFromPrevTask");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=32)]
+        public System.Nullable<float> FactDistanceFromPrevTask {
+            get {
+                return this.FactDistanceFromPrevTaskField;
+            }
+            set {
+                if ((this.FactDistanceFromPrevTaskField.Equals(value) != true)) {
+                    this.FactDistanceFromPrevTaskField = value;
+                    this.RaisePropertyChanged("FactDistanceFromPrevTask");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=33)]
+        public float DrivingFromPrevTask {
+            get {
+                return this.DrivingFromPrevTaskField;
+            }
+            set {
+                if ((this.DrivingFromPrevTaskField.Equals(value) != true)) {
+                    this.DrivingFromPrevTaskField = value;
+                    this.RaisePropertyChanged("DrivingFromPrevTask");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=34)]
+        public float RemainingDrivingHours {
+            get {
+                return this.RemainingDrivingHoursField;
+            }
+            set {
+                if ((this.RemainingDrivingHoursField.Equals(value) != true)) {
+                    this.RemainingDrivingHoursField = value;
+                    this.RaisePropertyChanged("RemainingDrivingHours");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=35)]
+        public TestClient.TestServiceReference.Route Route {
+            get {
+                return this.RouteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RouteField, value) != true)) {
+                    this.RouteField = value;
+                    this.RaisePropertyChanged("Route");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=36)]
+        public System.DateTime BusinessEta {
+            get {
+                return this.BusinessEtaField;
+            }
+            set {
+                if ((this.BusinessEtaField.Equals(value) != true)) {
+                    this.BusinessEtaField = value;
+                    this.RaisePropertyChanged("BusinessEta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=37)]
+        public bool RestEnabled {
+            get {
+                return this.RestEnabledField;
+            }
+            set {
+                if ((this.RestEnabledField.Equals(value) != true)) {
+                    this.RestEnabledField = value;
+                    this.RaisePropertyChanged("RestEnabled");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CargoType", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    public enum CargoType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Normal = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ADR = 1,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Resource", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class Resource : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float ActualFuelLevelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> ActualFuelLevelManualTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ActualFuelLevelOdoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime ActualFuelLevelTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Location ActualLocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> ActualLocationManualTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ActualLocationOdoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime ActualLocationTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float AdditionalFuelConsumptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float BaseFuelConsumptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Location DestinationLocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DestinationLocationDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float DestinationLocationFuelLevelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool DestinationLocationIsBookedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.LocationType DestinationLocationTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DestinationLocationTypeOriginalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DirectionCountryCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Driver[] DriversField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float EmissionStandardField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsDestinationLocationFactDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int OrganizationIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SuperstructureTypeIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TankSizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TrailerChassisNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TrailerPlateNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TrailerSaddleHeightIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TrailerVehicleIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TruckChassisNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TruckPlateNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TruckSaddleHeightIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TruckVehicleIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.VASType VASTypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float ActualFuelLevel {
+            get {
+                return this.ActualFuelLevelField;
+            }
+            set {
+                if ((this.ActualFuelLevelField.Equals(value) != true)) {
+                    this.ActualFuelLevelField = value;
+                    this.RaisePropertyChanged("ActualFuelLevel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ActualFuelLevelManualTimeStamp {
+            get {
+                return this.ActualFuelLevelManualTimeStampField;
+            }
+            set {
+                if ((this.ActualFuelLevelManualTimeStampField.Equals(value) != true)) {
+                    this.ActualFuelLevelManualTimeStampField = value;
+                    this.RaisePropertyChanged("ActualFuelLevelManualTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ActualFuelLevelOdo {
+            get {
+                return this.ActualFuelLevelOdoField;
+            }
+            set {
+                if ((this.ActualFuelLevelOdoField.Equals(value) != true)) {
+                    this.ActualFuelLevelOdoField = value;
+                    this.RaisePropertyChanged("ActualFuelLevelOdo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime ActualFuelLevelTimeStamp {
+            get {
+                return this.ActualFuelLevelTimeStampField;
+            }
+            set {
+                if ((this.ActualFuelLevelTimeStampField.Equals(value) != true)) {
+                    this.ActualFuelLevelTimeStampField = value;
+                    this.RaisePropertyChanged("ActualFuelLevelTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.Location ActualLocation {
+            get {
+                return this.ActualLocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ActualLocationField, value) != true)) {
+                    this.ActualLocationField = value;
+                    this.RaisePropertyChanged("ActualLocation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ActualLocationManualTimeStamp {
+            get {
+                return this.ActualLocationManualTimeStampField;
+            }
+            set {
+                if ((this.ActualLocationManualTimeStampField.Equals(value) != true)) {
+                    this.ActualLocationManualTimeStampField = value;
+                    this.RaisePropertyChanged("ActualLocationManualTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ActualLocationOdo {
+            get {
+                return this.ActualLocationOdoField;
+            }
+            set {
+                if ((this.ActualLocationOdoField.Equals(value) != true)) {
+                    this.ActualLocationOdoField = value;
+                    this.RaisePropertyChanged("ActualLocationOdo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime ActualLocationTimeStamp {
+            get {
+                return this.ActualLocationTimeStampField;
+            }
+            set {
+                if ((this.ActualLocationTimeStampField.Equals(value) != true)) {
+                    this.ActualLocationTimeStampField = value;
+                    this.RaisePropertyChanged("ActualLocationTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float AdditionalFuelConsumption {
+            get {
+                return this.AdditionalFuelConsumptionField;
+            }
+            set {
+                if ((this.AdditionalFuelConsumptionField.Equals(value) != true)) {
+                    this.AdditionalFuelConsumptionField = value;
+                    this.RaisePropertyChanged("AdditionalFuelConsumption");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float BaseFuelConsumption {
+            get {
+                return this.BaseFuelConsumptionField;
+            }
+            set {
+                if ((this.BaseFuelConsumptionField.Equals(value) != true)) {
+                    this.BaseFuelConsumptionField = value;
+                    this.RaisePropertyChanged("BaseFuelConsumption");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.Location DestinationLocation {
+            get {
+                return this.DestinationLocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DestinationLocationField, value) != true)) {
+                    this.DestinationLocationField = value;
+                    this.RaisePropertyChanged("DestinationLocation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DestinationLocationDate {
+            get {
+                return this.DestinationLocationDateField;
+            }
+            set {
+                if ((this.DestinationLocationDateField.Equals(value) != true)) {
+                    this.DestinationLocationDateField = value;
+                    this.RaisePropertyChanged("DestinationLocationDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float DestinationLocationFuelLevel {
+            get {
+                return this.DestinationLocationFuelLevelField;
+            }
+            set {
+                if ((this.DestinationLocationFuelLevelField.Equals(value) != true)) {
+                    this.DestinationLocationFuelLevelField = value;
+                    this.RaisePropertyChanged("DestinationLocationFuelLevel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool DestinationLocationIsBooked {
+            get {
+                return this.DestinationLocationIsBookedField;
+            }
+            set {
+                if ((this.DestinationLocationIsBookedField.Equals(value) != true)) {
+                    this.DestinationLocationIsBookedField = value;
+                    this.RaisePropertyChanged("DestinationLocationIsBooked");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.LocationType DestinationLocationType {
+            get {
+                return this.DestinationLocationTypeField;
+            }
+            set {
+                if ((this.DestinationLocationTypeField.Equals(value) != true)) {
+                    this.DestinationLocationTypeField = value;
+                    this.RaisePropertyChanged("DestinationLocationType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DestinationLocationTypeOriginal {
+            get {
+                return this.DestinationLocationTypeOriginalField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DestinationLocationTypeOriginalField, value) != true)) {
+                    this.DestinationLocationTypeOriginalField = value;
+                    this.RaisePropertyChanged("DestinationLocationTypeOriginal");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DirectionCountryCode {
+            get {
+                return this.DirectionCountryCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DirectionCountryCodeField, value) != true)) {
+                    this.DirectionCountryCodeField = value;
+                    this.RaisePropertyChanged("DirectionCountryCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.Driver[] Drivers {
+            get {
+                return this.DriversField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DriversField, value) != true)) {
+                    this.DriversField = value;
+                    this.RaisePropertyChanged("Drivers");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float EmissionStandard {
+            get {
+                return this.EmissionStandardField;
+            }
+            set {
+                if ((this.EmissionStandardField.Equals(value) != true)) {
+                    this.EmissionStandardField = value;
+                    this.RaisePropertyChanged("EmissionStandard");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsDestinationLocationFactDate {
+            get {
+                return this.IsDestinationLocationFactDateField;
+            }
+            set {
+                if ((this.IsDestinationLocationFactDateField.Equals(value) != true)) {
+                    this.IsDestinationLocationFactDateField = value;
+                    this.RaisePropertyChanged("IsDestinationLocationFactDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int OrganizationId {
+            get {
+                return this.OrganizationIdField;
+            }
+            set {
+                if ((this.OrganizationIdField.Equals(value) != true)) {
+                    this.OrganizationIdField = value;
+                    this.RaisePropertyChanged("OrganizationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SuperstructureTypeId {
+            get {
+                return this.SuperstructureTypeIdField;
+            }
+            set {
+                if ((this.SuperstructureTypeIdField.Equals(value) != true)) {
+                    this.SuperstructureTypeIdField = value;
+                    this.RaisePropertyChanged("SuperstructureTypeId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TankSize {
+            get {
+                return this.TankSizeField;
+            }
+            set {
+                if ((this.TankSizeField.Equals(value) != true)) {
+                    this.TankSizeField = value;
+                    this.RaisePropertyChanged("TankSize");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TrailerChassisNumber {
+            get {
+                return this.TrailerChassisNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TrailerChassisNumberField, value) != true)) {
+                    this.TrailerChassisNumberField = value;
+                    this.RaisePropertyChanged("TrailerChassisNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TrailerPlateNumber {
+            get {
+                return this.TrailerPlateNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TrailerPlateNumberField, value) != true)) {
+                    this.TrailerPlateNumberField = value;
+                    this.RaisePropertyChanged("TrailerPlateNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TrailerSaddleHeightId {
+            get {
+                return this.TrailerSaddleHeightIdField;
+            }
+            set {
+                if ((this.TrailerSaddleHeightIdField.Equals(value) != true)) {
+                    this.TrailerSaddleHeightIdField = value;
+                    this.RaisePropertyChanged("TrailerSaddleHeightId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TrailerVehicleId {
+            get {
+                return this.TrailerVehicleIdField;
+            }
+            set {
+                if ((this.TrailerVehicleIdField.Equals(value) != true)) {
+                    this.TrailerVehicleIdField = value;
+                    this.RaisePropertyChanged("TrailerVehicleId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TruckChassisNumber {
+            get {
+                return this.TruckChassisNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TruckChassisNumberField, value) != true)) {
+                    this.TruckChassisNumberField = value;
+                    this.RaisePropertyChanged("TruckChassisNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TruckPlateNumber {
+            get {
+                return this.TruckPlateNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TruckPlateNumberField, value) != true)) {
+                    this.TruckPlateNumberField = value;
+                    this.RaisePropertyChanged("TruckPlateNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TruckSaddleHeightId {
+            get {
+                return this.TruckSaddleHeightIdField;
+            }
+            set {
+                if ((this.TruckSaddleHeightIdField.Equals(value) != true)) {
+                    this.TruckSaddleHeightIdField = value;
+                    this.RaisePropertyChanged("TruckSaddleHeightId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TruckVehicleId {
+            get {
+                return this.TruckVehicleIdField;
+            }
+            set {
+                if ((this.TruckVehicleIdField.Equals(value) != true)) {
+                    this.TruckVehicleIdField = value;
+                    this.RaisePropertyChanged("TruckVehicleId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.VASType VASType {
+            get {
+                return this.VASTypeField;
+            }
+            set {
+                if ((this.VASTypeField.Equals(value) != true)) {
+                    this.VASTypeField = value;
+                    this.RaisePropertyChanged("VASType");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Driver", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class Driver : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CardIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DidbCardExpireField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] ForbiddenCountriesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FullNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime LastHomeDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.QualcommState StateField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CardId {
+            get {
+                return this.CardIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CardIdField, value) != true)) {
+                    this.CardIdField = value;
+                    this.RaisePropertyChanged("CardId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DidbCardExpire {
+            get {
+                return this.DidbCardExpireField;
+            }
+            set {
+                if ((this.DidbCardExpireField.Equals(value) != true)) {
+                    this.DidbCardExpireField = value;
+                    this.RaisePropertyChanged("DidbCardExpire");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] ForbiddenCountries {
+            get {
+                return this.ForbiddenCountriesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ForbiddenCountriesField, value) != true)) {
+                    this.ForbiddenCountriesField = value;
+                    this.RaisePropertyChanged("ForbiddenCountries");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FullName {
+            get {
+                return this.FullNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FullNameField, value) != true)) {
+                    this.FullNameField = value;
+                    this.RaisePropertyChanged("FullName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime LastHomeDate {
+            get {
+                return this.LastHomeDateField;
+            }
+            set {
+                if ((this.LastHomeDateField.Equals(value) != true)) {
+                    this.LastHomeDateField = value;
+                    this.RaisePropertyChanged("LastHomeDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.QualcommState State {
+            get {
+                return this.StateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StateField, value) != true)) {
+                    this.StateField = value;
+                    this.RaisePropertyChanged("State");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="QualcommState", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class QualcommState : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.QualcommActivity ActivityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> ActivityTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CardIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> ContinousDriveTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> ContinousLabourShortTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ContinuousDriveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ContinuousLabourShortField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DayDriveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> DayDriveTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DayDutyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> DayDutyTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> EndOfLastNotReducedWeeklyRestField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte ExtendedDrivingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> ExtendedDrivingTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FortnightlyDriveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FortnightyDriveTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsCoDriverField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime LastEventField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> LastEventTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte ReducedDayRestsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> ReducedDayRestsTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SplitDayRestField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> SplitDayRestTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime StartDayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> StartDayTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> StartOpWeekField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> StartOpWeekTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime TimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int WeekDriveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> WeekDriveTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int WeekRestCompensationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> WeekRestCompensationTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int WeekRestCompensationTotalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> WeekRestCompensationTotalTimeStampField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.QualcommActivity Activity {
+            get {
+                return this.ActivityField;
+            }
+            set {
+                if ((this.ActivityField.Equals(value) != true)) {
+                    this.ActivityField = value;
+                    this.RaisePropertyChanged("Activity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ActivityTimeStamp {
+            get {
+                return this.ActivityTimeStampField;
+            }
+            set {
+                if ((this.ActivityTimeStampField.Equals(value) != true)) {
+                    this.ActivityTimeStampField = value;
+                    this.RaisePropertyChanged("ActivityTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CardId {
+            get {
+                return this.CardIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CardIdField, value) != true)) {
+                    this.CardIdField = value;
+                    this.RaisePropertyChanged("CardId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ContinousDriveTimeStamp {
+            get {
+                return this.ContinousDriveTimeStampField;
+            }
+            set {
+                if ((this.ContinousDriveTimeStampField.Equals(value) != true)) {
+                    this.ContinousDriveTimeStampField = value;
+                    this.RaisePropertyChanged("ContinousDriveTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ContinousLabourShortTimeStamp {
+            get {
+                return this.ContinousLabourShortTimeStampField;
+            }
+            set {
+                if ((this.ContinousLabourShortTimeStampField.Equals(value) != true)) {
+                    this.ContinousLabourShortTimeStampField = value;
+                    this.RaisePropertyChanged("ContinousLabourShortTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ContinuousDrive {
+            get {
+                return this.ContinuousDriveField;
+            }
+            set {
+                if ((this.ContinuousDriveField.Equals(value) != true)) {
+                    this.ContinuousDriveField = value;
+                    this.RaisePropertyChanged("ContinuousDrive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ContinuousLabourShort {
+            get {
+                return this.ContinuousLabourShortField;
+            }
+            set {
+                if ((this.ContinuousLabourShortField.Equals(value) != true)) {
+                    this.ContinuousLabourShortField = value;
+                    this.RaisePropertyChanged("ContinuousLabourShort");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DayDrive {
+            get {
+                return this.DayDriveField;
+            }
+            set {
+                if ((this.DayDriveField.Equals(value) != true)) {
+                    this.DayDriveField = value;
+                    this.RaisePropertyChanged("DayDrive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> DayDriveTimeStamp {
+            get {
+                return this.DayDriveTimeStampField;
+            }
+            set {
+                if ((this.DayDriveTimeStampField.Equals(value) != true)) {
+                    this.DayDriveTimeStampField = value;
+                    this.RaisePropertyChanged("DayDriveTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DayDuty {
+            get {
+                return this.DayDutyField;
+            }
+            set {
+                if ((this.DayDutyField.Equals(value) != true)) {
+                    this.DayDutyField = value;
+                    this.RaisePropertyChanged("DayDuty");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> DayDutyTimeStamp {
+            get {
+                return this.DayDutyTimeStampField;
+            }
+            set {
+                if ((this.DayDutyTimeStampField.Equals(value) != true)) {
+                    this.DayDutyTimeStampField = value;
+                    this.RaisePropertyChanged("DayDutyTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> EndOfLastNotReducedWeeklyRest {
+            get {
+                return this.EndOfLastNotReducedWeeklyRestField;
+            }
+            set {
+                if ((this.EndOfLastNotReducedWeeklyRestField.Equals(value) != true)) {
+                    this.EndOfLastNotReducedWeeklyRestField = value;
+                    this.RaisePropertyChanged("EndOfLastNotReducedWeeklyRest");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte ExtendedDriving {
+            get {
+                return this.ExtendedDrivingField;
+            }
+            set {
+                if ((this.ExtendedDrivingField.Equals(value) != true)) {
+                    this.ExtendedDrivingField = value;
+                    this.RaisePropertyChanged("ExtendedDriving");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ExtendedDrivingTimeStamp {
+            get {
+                return this.ExtendedDrivingTimeStampField;
+            }
+            set {
+                if ((this.ExtendedDrivingTimeStampField.Equals(value) != true)) {
+                    this.ExtendedDrivingTimeStampField = value;
+                    this.RaisePropertyChanged("ExtendedDrivingTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FortnightlyDrive {
+            get {
+                return this.FortnightlyDriveField;
+            }
+            set {
+                if ((this.FortnightlyDriveField.Equals(value) != true)) {
+                    this.FortnightlyDriveField = value;
+                    this.RaisePropertyChanged("FortnightlyDrive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> FortnightyDriveTimeStamp {
+            get {
+                return this.FortnightyDriveTimeStampField;
+            }
+            set {
+                if ((this.FortnightyDriveTimeStampField.Equals(value) != true)) {
+                    this.FortnightyDriveTimeStampField = value;
+                    this.RaisePropertyChanged("FortnightyDriveTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsCoDriver {
+            get {
+                return this.IsCoDriverField;
+            }
+            set {
+                if ((this.IsCoDriverField.Equals(value) != true)) {
+                    this.IsCoDriverField = value;
+                    this.RaisePropertyChanged("IsCoDriver");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime LastEvent {
+            get {
+                return this.LastEventField;
+            }
+            set {
+                if ((this.LastEventField.Equals(value) != true)) {
+                    this.LastEventField = value;
+                    this.RaisePropertyChanged("LastEvent");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> LastEventTimeStamp {
+            get {
+                return this.LastEventTimeStampField;
+            }
+            set {
+                if ((this.LastEventTimeStampField.Equals(value) != true)) {
+                    this.LastEventTimeStampField = value;
+                    this.RaisePropertyChanged("LastEventTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte ReducedDayRests {
+            get {
+                return this.ReducedDayRestsField;
+            }
+            set {
+                if ((this.ReducedDayRestsField.Equals(value) != true)) {
+                    this.ReducedDayRestsField = value;
+                    this.RaisePropertyChanged("ReducedDayRests");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ReducedDayRestsTimeStamp {
+            get {
+                return this.ReducedDayRestsTimeStampField;
+            }
+            set {
+                if ((this.ReducedDayRestsTimeStampField.Equals(value) != true)) {
+                    this.ReducedDayRestsTimeStampField = value;
+                    this.RaisePropertyChanged("ReducedDayRestsTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SplitDayRest {
+            get {
+                return this.SplitDayRestField;
+            }
+            set {
+                if ((this.SplitDayRestField.Equals(value) != true)) {
+                    this.SplitDayRestField = value;
+                    this.RaisePropertyChanged("SplitDayRest");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> SplitDayRestTimeStamp {
+            get {
+                return this.SplitDayRestTimeStampField;
+            }
+            set {
+                if ((this.SplitDayRestTimeStampField.Equals(value) != true)) {
+                    this.SplitDayRestTimeStampField = value;
+                    this.RaisePropertyChanged("SplitDayRestTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime StartDay {
+            get {
+                return this.StartDayField;
+            }
+            set {
+                if ((this.StartDayField.Equals(value) != true)) {
+                    this.StartDayField = value;
+                    this.RaisePropertyChanged("StartDay");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> StartDayTimeStamp {
+            get {
+                return this.StartDayTimeStampField;
+            }
+            set {
+                if ((this.StartDayTimeStampField.Equals(value) != true)) {
+                    this.StartDayTimeStampField = value;
+                    this.RaisePropertyChanged("StartDayTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> StartOpWeek {
+            get {
+                return this.StartOpWeekField;
+            }
+            set {
+                if ((this.StartOpWeekField.Equals(value) != true)) {
+                    this.StartOpWeekField = value;
+                    this.RaisePropertyChanged("StartOpWeek");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> StartOpWeekTimeStamp {
+            get {
+                return this.StartOpWeekTimeStampField;
+            }
+            set {
+                if ((this.StartOpWeekTimeStampField.Equals(value) != true)) {
+                    this.StartOpWeekTimeStampField = value;
+                    this.RaisePropertyChanged("StartOpWeekTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime TimeStamp {
+            get {
+                return this.TimeStampField;
+            }
+            set {
+                if ((this.TimeStampField.Equals(value) != true)) {
+                    this.TimeStampField = value;
+                    this.RaisePropertyChanged("TimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int WeekDrive {
+            get {
+                return this.WeekDriveField;
+            }
+            set {
+                if ((this.WeekDriveField.Equals(value) != true)) {
+                    this.WeekDriveField = value;
+                    this.RaisePropertyChanged("WeekDrive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> WeekDriveTimeStamp {
+            get {
+                return this.WeekDriveTimeStampField;
+            }
+            set {
+                if ((this.WeekDriveTimeStampField.Equals(value) != true)) {
+                    this.WeekDriveTimeStampField = value;
+                    this.RaisePropertyChanged("WeekDriveTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int WeekRestCompensation {
+            get {
+                return this.WeekRestCompensationField;
+            }
+            set {
+                if ((this.WeekRestCompensationField.Equals(value) != true)) {
+                    this.WeekRestCompensationField = value;
+                    this.RaisePropertyChanged("WeekRestCompensation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> WeekRestCompensationTimeStamp {
+            get {
+                return this.WeekRestCompensationTimeStampField;
+            }
+            set {
+                if ((this.WeekRestCompensationTimeStampField.Equals(value) != true)) {
+                    this.WeekRestCompensationTimeStampField = value;
+                    this.RaisePropertyChanged("WeekRestCompensationTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int WeekRestCompensationTotal {
+            get {
+                return this.WeekRestCompensationTotalField;
+            }
+            set {
+                if ((this.WeekRestCompensationTotalField.Equals(value) != true)) {
+                    this.WeekRestCompensationTotalField = value;
+                    this.RaisePropertyChanged("WeekRestCompensationTotal");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> WeekRestCompensationTotalTimeStamp {
+            get {
+                return this.WeekRestCompensationTotalTimeStampField;
+            }
+            set {
+                if ((this.WeekRestCompensationTotalTimeStampField.Equals(value) != true)) {
+                    this.WeekRestCompensationTotalTimeStampField = value;
+                    this.RaisePropertyChanged("WeekRestCompensationTotalTimeStamp");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="QualcommActivity", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    public enum QualcommActivity : byte {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Drive = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Work = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Rest = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Wait = 3,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="VASType", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    public enum VASType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Normal = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        VAS = 1,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DriverTicket", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class DriverTicket : TestClient.TestServiceReference.Ticket {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CardIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CardId {
+            get {
+                return this.CardIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CardIdField, value) != true)) {
+                    this.CardIdField = value;
+                    this.RaisePropertyChanged("CardId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResourceTicket", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class ResourceTicket : TestClient.TestServiceReference.Ticket {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ResourceIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ResourceId {
+            get {
+                return this.ResourceIdField;
+            }
+            set {
+                if ((this.ResourceIdField.Equals(value) != true)) {
+                    this.ResourceIdField = value;
+                    this.RaisePropertyChanged("ResourceId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ExceptionTicket", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class ExceptionTicket : TestClient.TestServiceReference.Ticket {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LocationTicket", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class LocationTicket : TestClient.TestServiceReference.TaskTicket {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LocationIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LocationId {
+            get {
+                return this.LocationIdField;
+            }
+            set {
+                if ((this.LocationIdField.Equals(value) != true)) {
+                    this.LocationIdField = value;
+                    this.RaisePropertyChanged("LocationId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TaskTicket", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.LocationTicket))]
+    public partial class TaskTicket : TestClient.TestServiceReference.Ticket {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TaskIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TaskId {
+            get {
+                return this.TaskIdField;
+            }
+            set {
+                if ((this.TaskIdField.Equals(value) != true)) {
+                    this.TaskIdField = value;
+                    this.RaisePropertyChanged("TaskId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PoiLocationTicket", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll")]
+    [System.SerializableAttribute()]
+    public partial class PoiLocationTicket : TestClient.TestServiceReference.Ticket {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EndLocationIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> StartLocationIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> EndLocationId {
+            get {
+                return this.EndLocationIdField;
+            }
+            set {
+                if ((this.EndLocationIdField.Equals(value) != true)) {
+                    this.EndLocationIdField = value;
+                    this.RaisePropertyChanged("EndLocationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> StartLocationId {
+            get {
+                return this.StartLocationIdField;
+            }
+            set {
+                if ((this.StartLocationIdField.Equals(value) != true)) {
+                    this.StartLocationIdField = value;
+                    this.RaisePropertyChanged("StartLocationId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="IntSeconds", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.Utils")]
+    [System.SerializableAttribute()]
+    public partial struct IntSeconds : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int valueField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int value {
+            get {
+                return this.valueField;
+            }
+            set {
+                if ((this.valueField.Equals(value) != true)) {
+                    this.valueField = value;
+                    this.RaisePropertyChanged("value");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="IntEuroCents", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.Utils")]
+    [System.SerializableAttribute()]
+    public partial struct IntEuroCents : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int valueField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int value {
+            get {
+                return this.valueField;
+            }
+            set {
+                if ((this.valueField.Equals(value) != true)) {
+                    this.valueField = value;
+                    this.RaisePropertyChanged("value");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TicketHolderBase", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll.Entities")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Tour))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.Poi))]
+    public partial class TicketHolderBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.Ticket[] TicketsSerializableField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.Ticket[] TicketsSerializable {
+            get {
+                return this.TicketsSerializableField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TicketsSerializableField, value) != true)) {
+                    this.TicketsSerializableField = value;
+                    this.RaisePropertyChanged("TicketsSerializable");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SingleSchedule", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.Utils.Time")]
+    [System.SerializableAttribute()]
+    public partial class SingleSchedule : TestClient.TestServiceReference.ScheduleBase {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ScheduleBase", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.Utils.Time")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.WeeklySchedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.YearlySchedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestClient.TestServiceReference.SingleSchedule))]
+    public partial class ScheduleBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime UntilField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime[] exceptionsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime From {
+            get {
+                return this.FromField;
+            }
+            set {
+                if ((this.FromField.Equals(value) != true)) {
+                    this.FromField = value;
+                    this.RaisePropertyChanged("From");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Until {
+            get {
+                return this.UntilField;
+            }
+            set {
+                if ((this.UntilField.Equals(value) != true)) {
+                    this.UntilField = value;
+                    this.RaisePropertyChanged("Until");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime[] exceptions {
+            get {
+                return this.exceptionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.exceptionsField, value) != true)) {
+                    this.exceptionsField = value;
+                    this.RaisePropertyChanged("exceptions");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WeeklySchedule", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.Utils.Time")]
+    [System.SerializableAttribute()]
+    public partial class WeeklySchedule : TestClient.TestServiceReference.ScheduleBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DailyIntervalCountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.TestServiceReference.WeeklySchedule.DailyInterval[][] dailyIntervalsField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DailyIntervalCount {
+            get {
+                return this.DailyIntervalCountField;
+            }
+            set {
+                if ((this.DailyIntervalCountField.Equals(value) != true)) {
+                    this.DailyIntervalCountField = value;
+                    this.RaisePropertyChanged("DailyIntervalCount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.TestServiceReference.WeeklySchedule.DailyInterval[][] dailyIntervals {
+            get {
+                return this.dailyIntervalsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dailyIntervalsField, value) != true)) {
+                    this.dailyIntervalsField = value;
+                    this.RaisePropertyChanged("dailyIntervals");
+                }
+            }
+        }
+        
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+        [System.Runtime.Serialization.DataContractAttribute(Name="WeeklySchedule.DailyInterval", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.Utils.Time")]
+        [System.SerializableAttribute()]
+        public partial class DailyInterval : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+            
+            [System.NonSerializedAttribute()]
+            private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+            
+            private byte EndHourk__BackingFieldField;
+            
+            private byte EndMinutek__BackingFieldField;
+            
+            private byte StartHourk__BackingFieldField;
+            
+            private byte StartMinutek__BackingFieldField;
+            
+            public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+                get {
+                    return this.extensionDataField;
+                }
+                set {
+                    this.extensionDataField = value;
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute(Name="<EndHour>k__BackingField", IsRequired=true)]
+            public byte EndHourk__BackingField {
+                get {
+                    return this.EndHourk__BackingFieldField;
+                }
+                set {
+                    if ((this.EndHourk__BackingFieldField.Equals(value) != true)) {
+                        this.EndHourk__BackingFieldField = value;
+                        this.RaisePropertyChanged("EndHourk__BackingField");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute(Name="<EndMinute>k__BackingField", IsRequired=true)]
+            public byte EndMinutek__BackingField {
+                get {
+                    return this.EndMinutek__BackingFieldField;
+                }
+                set {
+                    if ((this.EndMinutek__BackingFieldField.Equals(value) != true)) {
+                        this.EndMinutek__BackingFieldField = value;
+                        this.RaisePropertyChanged("EndMinutek__BackingField");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute(Name="<StartHour>k__BackingField", IsRequired=true)]
+            public byte StartHourk__BackingField {
+                get {
+                    return this.StartHourk__BackingFieldField;
+                }
+                set {
+                    if ((this.StartHourk__BackingFieldField.Equals(value) != true)) {
+                        this.StartHourk__BackingFieldField = value;
+                        this.RaisePropertyChanged("StartHourk__BackingField");
+                    }
+                }
+            }
+            
+            [System.Runtime.Serialization.DataMemberAttribute(Name="<StartMinute>k__BackingField", IsRequired=true)]
+            public byte StartMinutek__BackingField {
+                get {
+                    return this.StartMinutek__BackingFieldField;
+                }
+                set {
+                    if ((this.StartMinutek__BackingFieldField.Equals(value) != true)) {
+                        this.StartMinutek__BackingFieldField = value;
+                        this.RaisePropertyChanged("StartMinutek__BackingField");
+                    }
+                }
+            }
+            
+            public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+            
+            protected void RaisePropertyChanged(string propertyName) {
+                System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+                if ((propertyChanged != null)) {
+                    propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="YearlySchedule", Namespace="http://schemas.datacontract.org/2004/07/Nexogen.Utils.Time")]
+    [System.SerializableAttribute()]
+    public partial class YearlySchedule : TestClient.TestServiceReference.ScheduleBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime YearlyEndField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime YearlyStartField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime YearlyEnd {
+            get {
+                return this.YearlyEndField;
+            }
+            set {
+                if ((this.YearlyEndField.Equals(value) != true)) {
+                    this.YearlyEndField = value;
+                    this.RaisePropertyChanged("YearlyEnd");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime YearlyStart {
+            get {
+                return this.YearlyStartField;
+            }
+            set {
+                if ((this.YearlyStartField.Equals(value) != true)) {
+                    this.YearlyStartField = value;
+                    this.RaisePropertyChanged("YearlyStart");
+                }
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TestServiceReference.IService")]
     public interface IService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetData", ReplyAction="http://tempuri.org/IService/GetDataResponse")]
-        XmlSerializerTest.ParentClass GetData(int value);
+        WcfBinarySurrogate.ParentClass GetData(int value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetData", ReplyAction="http://tempuri.org/IService/GetDataResponse")]
-        System.Threading.Tasks.Task<XmlSerializerTest.ParentClass> GetDataAsync(int value);
+        System.Threading.Tasks.Task<WcfBinarySurrogate.ParentClass> GetDataAsync(int value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetRoute", ReplyAction="http://tempuri.org/IService/GetRouteResponse")]
+        TestClient.TestServiceReference.Route GetRoute();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetRoute", ReplyAction="http://tempuri.org/IService/GetRouteResponse")]
+        System.Threading.Tasks.Task<TestClient.TestServiceReference.Route> GetRouteAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +5694,20 @@ namespace TestClient.TestServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public XmlSerializerTest.ParentClass GetData(int value) {
+        public WcfBinarySurrogate.ParentClass GetData(int value) {
             return base.Channel.GetData(value);
         }
         
-        public System.Threading.Tasks.Task<XmlSerializerTest.ParentClass> GetDataAsync(int value) {
+        public System.Threading.Tasks.Task<WcfBinarySurrogate.ParentClass> GetDataAsync(int value) {
             return base.Channel.GetDataAsync(value);
+        }
+        
+        public TestClient.TestServiceReference.Route GetRoute() {
+            return base.Channel.GetRoute();
+        }
+        
+        public System.Threading.Tasks.Task<TestClient.TestServiceReference.Route> GetRouteAsync() {
+            return base.Channel.GetRouteAsync();
         }
     }
 }

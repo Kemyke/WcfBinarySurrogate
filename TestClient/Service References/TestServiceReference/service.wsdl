@@ -4,7 +4,13 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/XmlSerializerTest" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Gis" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Nexogen.Utils" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Nexogen.WIRE.Bll.Entities" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Nexogen.Utils.Time" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfBinarySurrogate" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService_GetData_InputMessage">
@@ -13,16 +19,35 @@
   <wsdl:message name="IService_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_GetRoute_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoute" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetRoute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRouteResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/GetData" message="tns:IService_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/GetDataResponse" message="tns:IService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetRoute" message="tns:IService_GetRoute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetRouteResponse" message="tns:IService_GetRoute_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoute">
+      <soap:operation soapAction="http://tempuri.org/IService/GetRoute" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

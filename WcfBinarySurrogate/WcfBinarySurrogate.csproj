@@ -7,8 +7,8 @@
     <ProjectGuid>{EAA95BF2-3DC0-4687-B679-D49854F588D6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XmlSerializerTest</RootNamespace>
-    <AssemblyName>XmlSerializerTest</AssemblyName>
+    <RootNamespace>WcfBinarySurrogate</RootNamespace>
+    <AssemblyName>WcfBinarySurrogate</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -54,6 +54,9 @@
     <Compile Include="NormalChild.cs" />
     <Compile Include="ParentClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

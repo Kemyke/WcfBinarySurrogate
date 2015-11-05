@@ -5,7 +5,7 @@ using System.ServiceModel.Description;
 using System.Text;
 using System.Threading.Tasks;
 using TestClient.TestServiceReference;
-using XmlSerializerTest;
+using WcfBinarySurrogate;
 
 namespace TestClient
 {
