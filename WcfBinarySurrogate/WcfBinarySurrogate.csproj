@@ -47,10 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryStringContainer.cs" />
-    <Compile Include="BinarySurrogateHelper.cs" />
+    <Compile Include="BinarySurrogateConverter.cs" />
     <Compile Include="CustomSerializerBehaviorAttribute.cs" />
     <Compile Include="BinarySurrogate.cs" />
     <Compile Include="IBinarySerializedTypeProvider.cs" />
+    <Compile Include="ISurrogateConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

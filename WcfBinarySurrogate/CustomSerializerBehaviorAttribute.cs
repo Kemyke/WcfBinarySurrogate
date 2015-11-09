@@ -12,22 +12,34 @@ namespace WcfBinarySurrogate
     public class UseBinarySurrogateBehaviorAttribute : Attribute, IContractBehavior
     {
         private IBinarySerializedTypeProvider typeProvider;
+        private ISurrogateConverter surrogateConverter;
 
         /// <summary>
         /// ctor
         /// </summary>
         /// <param name="typeProvider">Must implement IBinarySerializedTypeProvider</param>
-        public UseBinarySurrogateBehaviorAttribute(Type typeProvider)
+        public UseBinarySurrogateBehaviorAttribute(Type typeProvider, Type surrogateConverter)
         {
-            if(typeProvider == null)
+            if (typeProvider == null)
             {
                 throw new ArgumentNullException("typeProvider");
             }
 
+            if (surrogateConverter == null)
+            {
+                throw new ArgumentNullException("surrogateConverter");
+            }
+
             this.typeProvider = Activator.CreateInstance(typeProvider) as IBinarySerializedTypeProvider;
-            if(this.typeProvider == null)
+            if (this.typeProvider == null)
             {
                 throw new ArgumentException("typeProvider implement IBinarySerializedTypeProvider");
+            }
+
+            this.surrogateConverter = Activator.CreateInstance(typeProvider) as ISurrogateConverter;
+            if (this.surrogateConverter == null)
+            {
+                throw new ArgumentException("typeProvider implement ISurrogateConverter");
             }
         }
 
@@ -47,12 +59,12 @@ namespace WcfBinarySurrogate
                 DataContractSerializerOperationBehavior dataContractBehavior = op.Behaviors.Find<DataContractSerializerOperationBehavior>() as DataContractSerializerOperationBehavior;
                 if (dataContractBehavior != null)
                 {
-                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate(typeProvider);
+                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate(typeProvider, surrogateConverter);
                 }
                 else
                 {
                     dataContractBehavior = new DataContractSerializerOperationBehavior(op);
-                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate(typeProvider);
+                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate(typeProvider, surrogateConverter);
                     op.Behaviors.Add(dataContractBehavior);
                 }
             }
@@ -69,12 +81,12 @@ namespace WcfBinarySurrogate
                 DataContractSerializerOperationBehavior dataContractBehavior = od.Behaviors.Find<DataContractSerializerOperationBehavior>() as DataContractSerializerOperationBehavior;
                 if (dataContractBehavior != null)
                 {
-                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate(typeProvider);
+                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate(typeProvider, surrogateConverter);
                 }
                 else
                 {
                     dataContractBehavior = new DataContractSerializerOperationBehavior(od);
-                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate(typeProvider);
+                    dataContractBehavior.DataContractSurrogate = new BinarySurrogate(typeProvider, surrogateConverter);
                     od.Behaviors.Add(dataContractBehavior);
                 }
             }

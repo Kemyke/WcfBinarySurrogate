@@ -9,7 +9,7 @@ using WcfBinarySurrogate;
 namespace TestWcfService
 {
     [ServiceContract]
-    [UseBinarySurrogateBehavior(typeof(MyBinarySerializedTypeProvider))]
+    [UseBinarySurrogateBehavior(typeof(MyBinarySerializedTypeProvider), typeof(BinarySurrogateConverter))]
     public interface IService
     {
         [OperationContract]

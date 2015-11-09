@@ -14,10 +14,12 @@ namespace WcfBinarySurrogate
     public class BinarySurrogate : IDataContractSurrogate
     {
         private IEnumerable<Type> surrogatedTypes;
+        private ISurrogateConverter surrogateSerializer;
 
-        public BinarySurrogate(IBinarySerializedTypeProvider typeProvider)
+        public BinarySurrogate(IBinarySerializedTypeProvider typeProvider, ISurrogateConverter surrogateSerializer)
         {
             this.surrogatedTypes = typeProvider.GetBinarySerializableTypes();
+            this.surrogateSerializer = surrogateSerializer;
 
             var notSeriazableTypes = surrogatedTypes.Where(t => !t.IsInterface && !t.GetCustomAttributes(typeof(SerializableAttribute), false).Any()).Select(t=>t.Name);
             if (notSeriazableTypes.Any())
@@ -42,7 +44,7 @@ namespace WcfBinarySurrogate
         {
             if (targetType == typeof(BinaryStringContainer))
             {
-                BinaryStringContainer bs = BinarySurrogateHelper.CreateSurrogate(obj);
+                BinaryStringContainer bs = surrogateSerializer.ConvertToSurrogate(obj);
                 return bs;
             }
             else
@@ -56,7 +58,7 @@ namespace WcfBinarySurrogate
             if (obj is BinaryStringContainer)
             {
                 BinaryStringContainer bs = obj as BinaryStringContainer;
-                object ret = BinarySurrogateHelper.CreateObject(bs);
+                object ret = surrogateSerializer.ConvertFromSurrogate(bs);
                 return ret;
             }
             else

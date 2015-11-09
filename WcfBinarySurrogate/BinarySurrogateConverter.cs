@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace WcfBinarySurrogate
 {
-    public static class BinarySurrogateHelper
+    public class BinarySurrogateConverter : ISurrogateConverter
     {
-        public static BinaryStringContainer CreateSurrogate(object obj)
+        public BinaryStringContainer ConvertToSurrogate(object obj)
         {
             BinaryStringContainer ret = new BinaryStringContainer();
             using (MemoryStream ms = new MemoryStream())
@@ -28,7 +28,7 @@ namespace WcfBinarySurrogate
             return ret;
         }
 
-        public static object CreateObject(BinaryStringContainer bs)
+        public object ConvertFromSurrogate(BinaryStringContainer bs)
         {
             object ret;
             byte[] b = Convert.FromBase64String(bs.BinaryString);

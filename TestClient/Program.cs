@@ -31,7 +31,7 @@ namespace TestClient
             {
                 if (dcsOperationBehavior.DataContractSurrogate == null)
                 {
-                    dcsOperationBehavior.DataContractSurrogate = new BinarySurrogate(new MyBinarySerializedTypeProvider());
+                    dcsOperationBehavior.DataContractSurrogate = new BinarySurrogate(new MyBinarySerializedTypeProvider(), new BinarySurrogateConverter());
                 }
                 else
                 {
